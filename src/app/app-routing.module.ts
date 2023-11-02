@@ -4,10 +4,10 @@ import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  // specify path the application should start at when running!
+  
  { path: '', redirectTo: 'signup', pathMatch: 'full'},
 
-//  declare all paths you have on your application
+
  {path: 'products', component: ProductsComponent},
 
  {path: 'signup', component: SignupComponent}
