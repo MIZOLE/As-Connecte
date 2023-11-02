@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component';import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,11 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
 
   { path: 'signin', component: SigninComponent },
+ {path: 'loadvoucher', component: LoadvoucherComponent},
+
+
+ 
+
 ];
 
 @NgModule({
