@@ -2,6 +2,19 @@
     flex: 1 1 auto;
   }
 .btn {
-    color:white;
+    color:#fff;
     font-size: 20px;
 }  
+
+.btn:hover {
+  color: aqua;
+} 
+
+.company-name {
+  color:#fff;
+  font-size: 20px;
+}  
+
+.company-name:hover {
+  color: #fff;
+} 
