@@ -2,10 +2,19 @@
     flex: 1 1 auto;
   }
 .btn {
-    color:white;
+    color:#fff;
     font-size: 20px;
 }  
 
-// body {
-//   width: 100%;
-// }
+.btn:hover {
+  color: aqua;
+} 
+
+.company-name {
+  color:#fff;
+  font-size: 20px;
+}  
+
+.company-name:hover {
+  color: #fff;
+} 
