@@ -11,6 +11,7 @@ import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     ProductsComponent,
     LoadvoucherComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
