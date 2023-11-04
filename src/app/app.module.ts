@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
