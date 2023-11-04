@@ -8,7 +8,7 @@
                 <h4>Sign up</h4>
                 <br/>
             </div>
-            <form runat="server">
+            <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
                 <div class="form" >
                     <div class="input_field">
                         <input button ID="strUsername" type="text" name="email" placeholder="name" class="input"/>
@@ -19,6 +19,9 @@
                     <div class="input_field">
                       <input button ID="strpassword" type="password" name="password" placeholder="$password" class="input"/>
                     </div>
+                    <div class="input_field">
+                        <input button ID="str-confirm-password" type="confirm-password" name="confirm-password" placeholder="$confirm-password" class="input"/>
+                      </div>
                   
                     <button button ID="Button1"  Text="Login" class="btn" >Signup</button>
                 </div>
@@ -29,5 +32,5 @@
         <!-- <div class="signup">
             
         </div> -->
-    </div>
-</div>
+    <!-- </div>
+</div> -->

@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
-import { HomeComponent } from './home/home.component';import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HomeComponent } from './home/home.component';
+import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
 
  {path: 'loadvoucher', component: LoadvoucherComponent},
- {path: 'Landing-Page', component:LandingPageComponent}
+ 
 
 
 
