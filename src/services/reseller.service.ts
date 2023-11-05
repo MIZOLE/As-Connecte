@@ -49,7 +49,6 @@ export class ResellerService {
       )
       .subscribe({
         next: (res: any) => {
-          console.log(res);
           this.token = res.token;
           this.username = res.username;
 
@@ -115,5 +114,9 @@ export class ResellerService {
         this.logoutTimer.setTimeout(expiresIn / 1000);
       }
     }
+  }
+
+  changePassword(id:any, data:any): Observable<any> {
+    return this._http.put<any>(`http://127.0.0.1:3300/reseller/change-password/${id}`, data)
   }
 }

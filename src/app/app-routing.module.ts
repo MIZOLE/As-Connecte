@@ -5,10 +5,10 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
-
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'change-password', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
 
@@ -18,13 +18,8 @@ const routes: Routes = [
 
   { path: 'signin', component: SigninComponent },
 
- {path: 'loadvoucher', component: LoadvoucherComponent},
- 
-
-
-
- 
-
+  { path: 'loadvoucher', component: LoadvoucherComponent },
+  { path: 'change-password', component: ChangePasswordComponent },
 ];
 
 @NgModule({
