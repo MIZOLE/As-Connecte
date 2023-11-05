@@ -4,15 +4,23 @@ import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
+import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+
 import { DashboardComponent} from './dashboard/dashboard.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'change-password', pathMatch: 'full' },
+
   { path: 'home', component: HomeComponent },
+
   { path: 'products', component: ProductsComponent },
 
  {path: 'signup', component: SignupComponent},
 
- {path: 'dashboard', component: DashboardComponent} 
+  { path: 'signin', component: SigninComponent },
+
+  { path: 'loadvoucher', component: LoadvoucherComponent },
+  { path: 'change-password', component: ChangePasswordComponent },
 ];
 
 @NgModule({
