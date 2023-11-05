@@ -8,17 +8,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent,
+    NavBarComponent,
+    DashboardComponent  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule
+
     // ChartsModule
   ],
   providers: [],
