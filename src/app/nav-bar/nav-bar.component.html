@@ -1,21 +1,35 @@
 <p>
-
-    <mat-toolbar style="background-color: black;">
+<p class="desktop-nav">
+    <mat-toolbar class="toolbar-desktop">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <img src="#" />
+            <img src="../../assets/Logo.png" alt="Logo" />
         </button>
-        <span class="btn">AsConnecte</span>
+        <span class="company-name">As'Connecte</span>
         <span class="example-spacer"></span>
-        <button mat-button>
-            <a class="btn">Home</a>
-        </button>
-        <button mat-button>
-            <a class="btn">Become a reseller</a>
-        </button>
-        <button mat-button>
-            <a class="btn">support</a>
-        </button>
 
+        <div class="links">
+            <a routerLink="/home">Home</a>
+            <a routerLink="/signin">Resell</a>
+            <a routerLink="/support">Support</a>
+        </div>
     </mat-toolbar>
+</p>
 
+<p class="mobile-nav">
+    <mat-toolbar class="toolbar-mobile">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <img src="../../assets/Logo.png" alt="Logo" />
+        </button>
+        <span class="company-name">As'Connecte</span>
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon style="color: #fff">menu</mat-icon></button>
+
+        <mat-menu #menu="matMenu">
+            <div class="btn-link">
+                <a mat-menu-item style="margin-top: -10px;" routerLink="/home">Home</a>
+                <a mat-menu-item routerLink="/signin">Resell</a>
+                <a mat-menu-item style="margin-bottom: -8px;" routerLink="/support">Support</a>
+            </div>
+        </mat-menu>
+    </mat-toolbar>
 </p>

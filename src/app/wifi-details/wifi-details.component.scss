@@ -1,0 +1,137 @@
+/* wifi-details.component.css */
+
+/* wifi-details.component.css */
+
+
+.form-container {
+    max-width: 200px; 
+    margin: 0 auto; 
+  }
+  
+
+.form-group {
+    margin-bottom: 2px; 
+    padding: 2px;
+    border-radius: 2px; 
+  }
+
+  /* wifi-details.component.css */
+
+/* Style the form container */
+.form-container {
+    max-width: 60px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style common properties for form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Style labels */
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Style the Submit button */
+  .form-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the Submit button */
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+
+ button{
+    // background-color: #717774;
+    border: none;
+    color: rgb(41, 39, 39);
+    // padding: 16px 32px;
+    text-decoration: none;
+    // margin: 4px 2px;
+    cursor: pointer;
+  }
+//   input {
+//     width: 30%;
+//   padding: 1px 20px;
+//   margin: 8px 0;
+//   border-radius: 4px;
+//   background-color: #f1f1f1;
+//   }
+  
+  text{
+    font-style: oblique;
+}
+  select {
+    width: 20%;
+    padding: 1px 10px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+//   textarea {
+//     width: 70%;
+//     height: 50px;
+//     padding: 12px 20px;
+//     border: 2px solid #ccc;
+//     border-radius: 4px;
+//     background-color: #f1f1f1;
+//     resize: none;
+//   }
+//   .form-group label {
+//     font-weight: bold;
+//   }
+
+  
+  .form-group input[type="text"] {
+    width: 10%; 
+    padding: 1px; 
+  }
+
+
+  
+// .form-group input[type="text"] {
+//     width: 3%; 
+//   }
+
+/* wifi-details.component.css */
+
+/* Style the form container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  /* Style the admin contact details (Email and Phone) inputs */
+.form-group input[type="email"].admin-contact,
+.form-group input[type="tel"].admin-contact {
+  width: 50%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+/* Style Administrator's Name/Title input */
+.form-group input[type="text"].admin-name {
+    width: 200%;
+    padding: 19px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+
+}
