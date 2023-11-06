@@ -2,7 +2,7 @@
 	margin: 0; padding: 0;
 	box-sizing: border-box; outline: none;
 	list-style: none; text-decoration: none;
-	font-family: 'Kristen ITC'; font-weight: 700;
+	// font-family: 'Kristen ITC'; font-weight: 700;
 }
 
 body{
@@ -17,8 +17,10 @@ body{
 
 .wrapper .header .top,
 .wrapper .signup{
-	background: #fff; border: 1px solid #e6e6e6;
-    border-radius: 1px; padding: 40px 50px 20px;
+	background: white; border: 1px solid #e6e6e6;
+    border-radius: 10px; padding: 40px 50px 20px; width: 30em;
+	box-shadow: 2px 2px 5px 2px black;
+
 }
 
 .wrapper .header .logo h4{
@@ -38,18 +40,13 @@ body{
 }
 
 .wrapper .header .form .btn {
-	margin: 1px 0; background-color: black; width: 115%;
-    border: 1px solid black; border-radius: 3px; color: #fff;
+	margin: 1px 0; background-color: purple; width: 115%;
+    border: 1px solid black; border-radius: 3px; color: white;
     text-align: center; cursor:pointer; font-size: 11.5px;
     position: relative; left: 21%; margin-left: -51px; padding: 7px; font-weight: bold;
 }
 
-// @media screen and (max-width: 992px) {
-// 	body {
-// 	  background-color: blue;
-// 	  color: white;
-// 	}
-//   }
+
 
 .wrapper .header .form .input_field .input:focus {
 	border: 1px solid #b2b2b2;

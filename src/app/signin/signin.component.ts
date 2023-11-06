@@ -11,4 +11,13 @@ import { Component } from '@angular/core';
 
 export class SigninComponent {
 
+  // username = ''
+  // password = ''
+
+  form = {
+    username:"",
+    password:""
+  }
 }
+
+
