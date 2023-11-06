@@ -10,7 +10,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'change-password', pathMatch: 'full' },
+  { path: '', redirectTo: 'signin', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
 
