@@ -8,9 +8,10 @@ const routes: Routes = [
  { path: '', redirectTo: 'signup', pathMatch: 'full'},
 
 //  declare all paths you have on your application
- {path: 'products', component: ProductsComponent},
+ { path: 'products', component: ProductsComponent},
 
- {path: 'signup', component: SignupComponent}
+ { path: 'signup', component: SignupComponent}
+
 ];
 
 @NgModule({
