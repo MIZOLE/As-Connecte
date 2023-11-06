@@ -1,10 +1,26 @@
+body {
+    scroll-behavior: auto !important;
+    box-sizing: border-box;
+}
 .card{
     direction: flex;
-    align-items: center;
+    align-content: center;
     position: relative;
     left: 50px;
     top: 100px;
     margin: 10px;
+    border-radius: 20px;
+    
+}
+
+.card-header{
+    background-color: navy;
+    border-radius: 20px 20px 0px 0;
+    text-align: center;
+    font-size: 600px;
+    font-weight: bold;
+    color: white;
+
 }
 
 h2{
@@ -15,13 +31,15 @@ h2{
     top: 100px;
 }
 
+
+
 // h5{
 //     font-size: large;
 //     font-weight: bold;
 // }
 
 
-@media only screen and (max-width:390px){
+@media only screen and (max-width:992px){
     .products {
         display: flex;
         align-items: center;
@@ -43,4 +61,12 @@ h2{
         position: relative;
         top: 100px;
     }
+
+    // .card-body{
+    //     // background-color: gray;
+    //     // border: 5px solid navy;
+        
+    // }
+
+    
 }
