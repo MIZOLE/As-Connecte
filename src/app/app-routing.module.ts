@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
+import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 const routes: Routes = [
   
  { path: '', redirectTo: 'signup', pathMatch: 'full'},
@@ -12,6 +13,8 @@ const routes: Routes = [
  {path: 'signup', component: SignupComponent},
 
  {path: 'signin', component: SigninComponent},
+
+ {path: 'wifi-details', component: WifiDetailsComponent}
 ];
 
 @NgModule({
