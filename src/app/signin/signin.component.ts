@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ResellerService } from 'src/services/reseller.service';
 import { Router } from '@angular/router';
@@ -9,9 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.scss'],
 })
 export class SigninComponent implements OnInit {
+
+  show:any
+
+
+
+
   constructor(
     private _resellerService: ResellerService,
-    private _router: Router
+    private _router: Router,
+    private el: ElementRef
   ) {}
 
   signInForm: FormGroup = new FormGroup({
@@ -20,6 +27,15 @@ export class SigninComponent implements OnInit {
   });
 
   ngOnInit(): void {}
+
+  sign_up(){
+    //this.container.classList.add  = "sign-up-mode"
+   this.show = "sign-up-mode"
+  }
+
+  sign_in(){
+    this.show = ""
+  }
 
   signIn() {
     this._resellerService.signIn(this.signInForm.value);
