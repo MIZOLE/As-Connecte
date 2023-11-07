@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { FormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
+import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
+
 import { SignupComponent } from './signup/signup.component';
 import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +30,7 @@ import { UsersconnectedComponent } from './usersconnected/usersconnected.compone
   declarations: [
     AppComponent,
     ProductsComponent,
+    WifiDetailsComponent,
     LoadvoucherComponent,
     NavBarComponent,
     HomeComponent,
@@ -37,6 +41,7 @@ import { UsersconnectedComponent } from './usersconnected/usersconnected.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,

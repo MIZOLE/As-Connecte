@@ -8,8 +8,9 @@ import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 
 import { DashboardComponent} from './dashboard/dashboard.component';
+import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'change-password', pathMatch: 'full' },
+  { path: '', redirectTo: 'signin', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
 
@@ -24,6 +25,8 @@ const routes: Routes = [
 
   { path: 'loadvoucher', component: LoadvoucherComponent },
   { path: 'change-password', component: ChangePasswordComponent },
+
+ {path: 'wifi-details', component: WifiDetailsComponent}
 ];
 
 @NgModule({
