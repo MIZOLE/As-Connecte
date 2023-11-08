@@ -42,33 +42,32 @@ export class ResellerService {
   }
 
   signIn(data: SignInInterface): void {
-    // console.log(data)
-    // this._http
-    //   .post<{ token: String; expiresIn: Number }>(
-    //     'http://127.0.0.1:3300/reseller/signin',
-    //     data
-    //   )
-    //   .subscribe({
-    //     next: (res: any) => {
-    //       this.token = res.token;
-    //       this.username = res.username;
+    this._http
+      .post<{ token: String; expiresIn: Number }>(
+        'http://127.0.0.1:3300/reseller/signin',
+        data
+      )
+      .subscribe({
+        next: (res: any) => {
+          this.token = res.token;
+          this.username = res.username;
 
-    //       if (this.token) {
-    //         this.authenticatedUser = true;
-    //         this._router.navigate(['/', 'dashboard']);
-    //         this.logoutTimer = setTimeout(() => {
-    //           this.logout();
-    //         }, res.expiresIn * 1000);
-    //         const now = new Date();
-    //         const expiresDate = new Date(now.getTime() + res.expiresIn * 1000);
-    //         this.storeLoginDetails(this.token, expiresDate);
-    //       }
-    //     },
-    //     error: (error) => {
-    //       console.log(error)
-    //       console.log('Incorrect username or password');
-    //     },
-    //   });
+          if (this.token) {
+            this.authenticatedUser = true;
+            this._router.navigate(['/', 'dashboard']);
+            this.logoutTimer = setTimeout(() => {
+              this.logout();
+            }, res.expiresIn * 1000);
+            const now = new Date();
+            const expiresDate = new Date(now.getTime() + res.expiresIn * 1000);
+            this.storeLoginDetails(this.token, expiresDate);
+          }
+        },
+        error: (error) => {
+          console.log(error)
+          console.log('Incorrect username or password');
+        },
+      });
   }
 
   logout() {

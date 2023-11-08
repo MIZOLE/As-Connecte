@@ -6,7 +6,7 @@
         <!-- form content -->
 
         <!-- signup form starts -->
-        <!-- <form [formGroup]="signUpForm" class="sign-up-form" (ngSubmit)="signUp()">
+        <form [formGroup]="signUpForm" class="sign-up-form" (ngSubmit)="signUp()">
           <h2 class="title" >
              <img src="https://i.postimg.cc/FFfQp3Gy/5118825.jpg" width="230" height="230" alt=""></h2>
           <div class="input-field">
@@ -28,7 +28,7 @@
           </div>
           <p style="color: red">{{notPasswordMatch}}</p>
           <input id="btnSubmit" type="submit" class="btn" value="Sign up"/>
-        </form> -->
+        </form>
 
         <!-- sign-in form starts here -->
         <form [formGroup]="signInForm" class="sign-in-form" (ngSubmit)="signIn()">
@@ -36,11 +36,11 @@
           <img class="title" src="https://i.postimg.cc/G2KnfxVK/4968146.jpg" width="230" height="230" alt="">
           <div class="input-field">
             <i><img src="https://i.postimg.cc/2y1fJyYS/email-1.gif" width="40" height="40" style="vertical-align: text-bottom; padding: 0%;"/></i>
-            <input id="email" type="email" FormControlName="emailS" placeholder="email" />
+            <input id="email" type="email" formControlName="email" placeholder="email" />
           </div>
           <div class="input-field">
             <i><img src="https://i.postimg.cc/85vdtZYJ/lock.gif" width="40" height="40" style="vertical-align: text-bottom; padding: 0%;"/></i>
-            <input id="confirmPin" type="password" FormControlName="passwordS" placeholder="password!"/>
+            <input id="confirmPin" type="password" formControlName="password" placeholder="password!"/>
           </div>
           <input id="btnSubmit" type="submit" class="btn" value="Sign in" />
         </form>

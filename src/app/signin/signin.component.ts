@@ -20,16 +20,16 @@ export class SigninComponent implements OnInit {
   invalidEmail: String = '';
   notPasswordMatch: String = '';
 
-  // signUpForm: FormGroup = new FormGroup({
-  //   username: new FormControl('', Validators.required),
-  //   email: new FormControl('', Validators.required),
-  //   password: new FormControl('', Validators.required),
-  //   confirmPassword: new FormControl('', Validators.required),
-  // });
+  signUpForm: FormGroup = new FormGroup({
+    username: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+    confirmPassword: new FormControl('', Validators.required),
+  });
 
   signInForm: FormGroup = new FormGroup({
-    emailS: new FormControl('', Validators.required),
-    passwordS: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
   });
 
   ngOnInit(): void {}
@@ -38,27 +38,27 @@ showSignUpForm() {
   this.show = "sign-up-mode"
 }
 
-  // signUp(){
-  //   if (!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g.test(this.signUpForm.value.email)) {
-  //     this.invalidEmail = 'Invalid email';
-  //     return
-  //   } else if (
-  //     this.signUpForm.value.password !== this.signUpForm.value.confirmPassword
-  //   ) {
-  //     this.notPasswordMatch = "Passwords don't match";
-  //     return
-  //   }
+  signUp(){
+    if (!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g.test(this.signUpForm.value.email)) {
+      this.invalidEmail = 'Invalid email';
+      return
+    } else if (
+      this.signUpForm.value.password !== this.signUpForm.value.confirmPassword
+    ) {
+      this.notPasswordMatch = "Passwords don't match";
+      return
+    }
 
-  //   this._resellerService.signup(this.signUpForm.value).subscribe({
-  //     next: () => {
-  //       console.log('registered successfully');
-  //       window.location.reload()
-  //     },
-  //     error: () => {
-  //       console.log('User Already Exists', 'Failed');
-  //     },
-  //   });
-  // }
+    this._resellerService.signup(this.signUpForm.value).subscribe({
+      next: () => {
+        console.log('registered successfully');
+        window.location.reload()
+      },
+      error: () => {
+        console.log('User Already Exists', 'Failed');
+      },
+    });
+  }
   
 
   showSignInForm(){
@@ -67,7 +67,7 @@ showSignUpForm() {
 
   signIn() {
 console.log(this.signInForm.value)
-    // this._resellerService.signIn(this.signInForm.value);
+    this._resellerService.signIn(this.signInForm.value);
 
   }
 }
