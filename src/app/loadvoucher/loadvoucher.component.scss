@@ -18,7 +18,10 @@ body {
   outline: none;
 }
 
-label {font-family: "Arimo", sans-serif;font-size:larger;font-weight: bolder;color: #5a5858;}
+// label {font-family: "Arimo", sans-serif;font-size:larger;font-weight: bolder;color: #5a5858;
+
+
+// }
 
 body {
   background: linear-gradient(to bottom, #639EDB, #0668CF) no-repeat;
@@ -46,79 +49,104 @@ a:hover, a:visited, a:hover, a:link {
   justify-content: center;
   align-items: center;
 }
-.field {
-  width: 385px;
-  height: 70px;
+input {
+  width: 180px;
+  // height: 70px;
   position: relative;
+  bottom: 70px;
+  height: 40px;
+  border: 2px solid black;
 }
-.field input {
-  width: 100%;
-  border-radius: 6px;
-  height: 70px;
-  border: 0;
-  padding: 10px;
-  padding: 20px 0 0 16px;
-  font-size: 0;
-  background: hwb(214 46% 51%);
-  transition: background 0.3s ease;
-  color: #ffffff;
-}
-.field input:focus {
-  background: #6b6666;
-  font-size: 23px;
-}
-.field input:focus::-moz-selection {
-  background: rgba(188, 232, 255, 0.5);
-}
-.field input:focus::selection {
-  background: rgba(188, 232, 255, 0.5);
-}
-.field input.active {
-  background: hsl(210, 3%, 46%);
-  font-size: 23px;
-}
-.field input,
-.field button {
-  position: absolute;
-  height: 70px;
-}
-.field button {
-  background: #e7e40aee;
-  right: 0;
-  border: 0;
-  width: 115px;
-  border-radius: 6px;
-  font-size: 22px;
-  cursor: pointer;
-  transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-  color: #7a7a76;
-  text-transform: uppercae;
+
+button{
+  margin: 5px;
+  width: 80px;
+  height: 40px;
+  background-color: green;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  bottom: 70px;
   
 }
-.field button.active:hover {
-  background: #e4e707;
+
+h2{
+  position: relative;
+  left: 50px;
+  font-weight: 600;
+  bottom: 70px;
 }
-.field button.full {
-  width: 100%;
-}
-.field input:focus + label {
-  font-size: 19px;
-  transform: translate(16px, 11px);
-  color: rgba(255, 255, 255, 0.7);
-}
-.field label {
-  position: absolute;
-  color: #d3c508;
-  transform: translate(16px, 20px);
-  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s 0.1s ease;
-  font-size: 28px;
-}
-.field label.active {
-  font-size: 19px;
-  transform: translate(16px, 11px);
-  color: rgba(255, 255, 255, 0.7);
-}
-.field input:focus + label + button {
-  opacity: 1;
-}
+
+
+
+// .field input {
+//   width: 100%;
+//   border-radius: 6px;
+//   height: 70px;
+//   border: 0;
+//   padding: 10px;
+//   padding: 20px 0 0 16px;
+//   font-size: 0;
+//   // background: hwb(214 46% 51%);
+//   transition: background 0.3s ease;
+//   color: #ffffff;
+// }
+// .field input:focus {
+//   background: #6b6666;
+//   font-size: 23px;
+// }
+// .field input:focus::-moz-selection {
+//   background: rgba(188, 232, 255, 0.5);
+// }
+// .field input:focus::selection {
+//   background: rgba(188, 232, 255, 0.5);
+// }
+// .field input.active {
+//   background: hsl(210, 3%, 46%);
+//   font-size: 23px;
+// }
+// .field input,
+// .field button {
+//   position: absolute;
+//   height: 70px;
+// }
+// .field button {
+//   background: #e7e40aee;
+//   right: 0;
+//   border: 0;
+//   width: 115px;
+//   border-radius: 6px;
+//   font-size: 22px;
+//   cursor: pointer;
+//   transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+//   opacity: 0;
+//   color: #7a7a76;
+//   text-transform: uppercae;
+  
+// }
+// .field button.active:hover {
+//   background: #e4e707;
+// // }
+// .field button.full {
+//   width: 100%;
+// }
+// .field input:focus + label {
+//   font-size: 19px;
+//   transform: translate(16px, 11px);
+//   color: rgba(255, 255, 255, 0.7);
+// }
+// .field label {
+//   position: absolute;
+//   color: #d3c508;
+//   transform: translate(16px, 20px);
+//   transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s 0.1s ease;
+//   font-size: 28px;
+// }
+// .field label.active {
+//   font-size: 19px;
+//   transform: translate(16px, 11px);
+//   color: rgba(255, 255, 255, 0.7);
+// }
+// .field input:focus + label + button {
+//   opacity: 1;
+// }
