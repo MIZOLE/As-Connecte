@@ -24,7 +24,11 @@ import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import {ChangePasswordComponent} from './change-password/change-password.component';
+import {ChangePasswordComponent} from './change-password/change-password.component';;
+import { BodyComponent } from './body/body.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +39,8 @@ import {ChangePasswordComponent} from './change-password/change-password.compone
     HomeComponent,
     SignupComponent,
     ChangePasswordComponent,
+    BodyComponent,
+    
   ],
   imports: [
     BrowserModule,
