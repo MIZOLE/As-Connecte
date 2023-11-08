@@ -4,6 +4,7 @@ import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
+import { BodyComponent } from './body/body.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
 
   { path: 'signin', component: SigninComponent },
  {path: 'loadvoucher', component: LoadvoucherComponent},
+  {path:'body', component: BodyComponent}
 
 
  
