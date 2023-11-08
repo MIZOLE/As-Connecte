@@ -26,6 +26,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import {ChangePasswordComponent} from './change-password/change-password.component';
 import { BodyComponent } from './body/body.component';
+import { InfoComponent } from './info/info.component';
 
 
 
@@ -40,6 +41,7 @@ import { BodyComponent } from './body/body.component';
     SignupComponent,
     ChangePasswordComponent,
     BodyComponent,
+    InfoComponent,
     
   ],
   imports: [
