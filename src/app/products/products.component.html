@@ -1,54 +1,103 @@
-<div>
- <h2>Products</h2>
- <div class="row">
-  <div class="col-3 m-3">
-    <div class="card" style= "width: 18rem; background-color: white;">
-  
-      <div class="card-body">
-        <h5 class="card-title">One Hour Voucher</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-        <p class="card-text"></p>
-        <!-- <a href="#" class="card-link">Card link</a> -->
-        <!-- <a href="#" class="card-link">Another link</a> -->
-      </div>
-      <ul class="list-group list-group-flush">
-          <li class="list-group-item" style="font-weight: bold;">R5,00</li>
-      </ul> 
-    </div>
+<section>
+  <div class="products">
+    <h1>Products</h1>
   </div>
-  <div class="col-3 m-3">
-    <div class="card" style="width: 18rem; background-color: white">
-  
-      <div class="card-body">
-        <h5 class="card-title"> Twelve Hours Voucher</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-        <p class="card-text"></p>
-        <!-- <a href="#" class="card-link">Card link</a> -->
-        <!-- <a href="#" class="card-link">Another link</a> -->
-      </div>
-      <ul class="list-group list-group-flush">
-          <li class="list-group-item" style="font-weight: bold;">R15,00</li>
-      </ul> 
-    </div>
-  </div>
-  <div class="col-3 m-3">
-    <div class="card" style="width: 18rem; background-color: white">
-  
-      <div class="card-body">
-        <h5 class="card-title">Daily Voucher</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-        <p class="card-text"></p>
-        <!-- <a href="#" class="card-link">Card link</a> -->
-        <!-- <a href="#" class="card-link">Another link</a> -->
-      </div>
-      <ul class="list-group list-group-flush">
-          <li class="list-group-item" style="font-weight: bold;">R25,00</li>
-      </ul> 
-    </div>
-  </div>
- </div>
 
+<div class="wrapper">
+  <div class="card">
+      <input type="checkbox" id="card1" class="more" aria-hidden="true">
+      <div class="content">
+          <div class="front" style="background-image: url('../../assets/images/background.png')">
+              <div class="inner">
+                  <h2>R5</h2>
+                  
+                  <label for="card1" class="button" aria-hidden="true">
+                      Details
+                  </label>
+              </div>
+          </div>
+          <div class="back">
+              <div class="inner">
+                 
+                  <div class="description">
+                    <p> Price: R5</p>
+                    <p> Data: 500MB</p>
+                    <p> Valid: 24 HOURS</p>
+                  </div>
+                  <!-- <div class="location">Warsaw, Poland</div> -->
+                  <!-- <div class="price">38€ / day</div> -->
+                  <label for="card1" class="button return" aria-hidden="true">
+                      <i class="fas fa-arrow-left"></i>
+                  </label>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <input type="checkbox" id="card2" class="more">
+      <div class="content">
+          <div class="front" style="background-image: url('../../assets/images/background.png')">
+              <div class="inner">
+                  <h2>R15</h2>
+                 
+                  <label for="card2" class="button" aria-hidden="true">
+                      Details
+                  </label>
+              </div>
+          </div>
+          <div class="back">
+              <div class="inner">
+                  
+                     
+              
+                  <div class="description">
+                    <p> Price: R15</p>
+                    <p> Data: 1GB</p>
+                    <p> Valid: 3 DAYS</p>
+                  </div>
+                  <!-- <div class="location">Warsaw, Poland</div> -->
+                  <!-- <div class="price">42€ / day</div> -->
+                  <label for="card2" class="button return" aria-hidden="true">
+                      <i class="fas fa-arrow-left"></i>
+                  </label>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <input type="checkbox" id="card3" class="more">
+      <div class="content">
+          <div class="front" style="background-image: url('../../assets/images/background.png')">
+              <div class="inner">
+                  <h2>R25</h2>
+                 
+                  <label for="card3" class="button" aria-hidden="true">
+                      Details
+                  </label>
+              </div>
+          </div>
+          <div class="back">
+              <div class="inner">
+                 
+                  <div class="description">
+                    <!-- <h3>Details</h3> -->
+                      <p> Price: R50</p>
+                      <p> Data: 5GB</p>
+                      <p> Valid: 7 DAYS</p>
+
+                      
+                  </div>
+                  <!-- <div class="location">Cracow, Poland</div> -->
+                  <!-- <div class="price">60€ / day</div> -->
+                  <label for="card3" class="button return" aria-hidden="true">
+                      <img src="../../assets/images/back-svgrepo-com.svg" style="width: 50px; height: 30px;" alt="">
+                  </label>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
+</section>
 
 
 
