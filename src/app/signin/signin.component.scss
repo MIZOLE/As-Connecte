@@ -7,7 +7,8 @@
   
   body,
   input {
-	font-family: 'Roboto', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+	
   }
   
   .container {
@@ -90,28 +91,31 @@
 	border-top-color: black;
   
 	text-align: center;
-	border-radius: 109px; 
+	border-radius: 10px; 
 	line-height: 100%; 
 	font-weight: bolder;
 	font-size: 13px;
 	color: black;
 	width: 200%;
+	
   }
   
   
   .btn {
-	width: 310px;
+	width: 240px;
 	font-size: 18px;
 	background-color: green;
 	border: none;
 	border-color: green;
 	height: 50px;
-	border-radius: 5px;
-	color: black;
+	border-radius: 50px;
+	color: whiteg;
 	font-weight: bolder;
-	margin: 1px 0;
+	// margin: 1px 0;
 	cursor: pointer;
 	transition: 0.5s;
+	margin-left: 40px;
+	
   }
   
   .btn:hover {
