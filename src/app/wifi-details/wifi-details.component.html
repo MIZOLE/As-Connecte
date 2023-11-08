@@ -1,104 +1,97 @@
-<form>
-    <div class="form-group">
-      <label for="networkName">Network Name (SSID):</label>
-      <input type="text" id="networkName" [(ngModel)]="networkName" name="networkName">
-    </div>
+<div class="container">
 
-    <form class="form-container">
-      <!-- Your form fields go here -->
-    </form>
+  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+
+<!-- Text input-->
+
+<div class="form-group">
+<label class="col-md-4 control-label">Network name [SSID]</label>  
+<div class="col-md-4 inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input  name="Network Name [SSID]" placeholder="Network name [SSID]" class="form-control"  type="text">
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+<!-- Add other form fields here -->
+<div class="form-group">
+  <label for="securityType">Network Security Type:</label>
+  <select id="securityType" name="securityType" [(ngModel)]="securityType">
+    <option value="WPA2">WPA2</option>
+    <option value="WPA3">WPA3</option>
+    <option value="Open">Open (No Security)</option>
+  </select>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Network password key</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="Network password key" placeholder="Network password key" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Network admin/ contact info</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+<!-- Add the Network Band field -->
+<div class="form-group">
+  <label for="networkBand">Network Band:</label>
+  <select id="networkBand" name="networkBand" [(ngModel)]="selectedNetworkBand" class="form-control">
+    <option value="2.4 GHz">2.4 GHz</option>
+    <option value="5 GHz">5 GHz</option>
+  </select>
+</div>
+
+  <!-- Add the Network Mode field -->
+  <div class="form-group">
+    <label for="networkMode">Network Mode:</label>
+    <select id="networkMode" name="networkMode" [(ngModel)]="selectedNetworkMode" class="form-control">
+      <option value="802.11n">802.11n</option>
+      <option value="802.11ac">802.11ac</option>
+      <option value="802.11ax">802.11ax</option>
+    </select>
+  </div>
+
+      <!-- Add the Channel field -->
+      <div class="form-group">
+        <label for="channel">Channel:</label>
+        <input type="text" id="channel" name="channel" [(ngModel)]="selectedChannel">
+      </div>
     
-  
-    <!-- Add other form fields here -->
-    <div class="form-group">
-      <label for="securityType">Network Security Type:</label>
-      <select id="securityType" name="securityType" [(ngModel)]="securityType">
-        <option value="WPA2">WPA2</option>
-        <option value="WPA3">WPA3</option>
-        <option value="Open">Open (No Security)</option>
-      </select>
-    </div>
+       <!-- Add the Network Encryption field -->
+       <div class="form-group">
+        <label for="networkEncryption">Network Encryption:</label>
+        <select id="networkEncryption" name="networkEncryption" [(ngModel)]="selectedNetworkEncryption" class="form-control">
+          <option value="WEP">WEP</option>
+          <option value="WPA">WPA</option>
+          <option value="WPA2/WPA3">WPA2/WPA3</option>
+        </select>
+      </div>
 
-      <!-- Add the Network Password/Key field -->
-  <div class="form-group">
-    <label for="networkPassword">Network Password/Key:</label>
-    <input type="password" id="networkPassword" name="networkPassword" [(ngModel)]="networkPassword">
-  </div>
-
-  <!-- Add the Network Band field -->
-  <div class="form-group">
-    <label for="networkBand">Network Band:</label>
-    <select id="networkBand" name="networkBand" [(ngModel)]="selectedNetworkBand" class="form-control">
-      <option value="2.4 GHz">2.4 GHz</option>
-      <option value="5 GHz">5 GHz</option>
-    </select>
-  </div>
-
-    <!-- Add the Network Mode field -->
-    <div class="form-group">
-      <label for="networkMode">Network Mode:</label>
-      <select id="networkMode" name="networkMode" [(ngModel)]="selectedNetworkMode" class="form-control">
-        <option value="802.11n">802.11n</option>
-        <option value="802.11ac">802.11ac</option>
-        <option value="802.11ax">802.11ax</option>
-      </select>
-    </div>
-
-     <!-- Add the Channel field -->
-  <div class="form-group">
-    <label for="channel">Channel:</label>
-    <input type="text" id="channel" name="channel" [(ngModel)]="selectedChannel">
-  </div>
-
-   <!-- Add the Network Encryption field -->
-   <div class="form-group">
-    <label for="networkEncryption">Network Encryption:</label>
-    <select id="networkEncryption" name="networkEncryption" [(ngModel)]="selectedNetworkEncryption" class="form-control">
-      <option value="WEP">WEP</option>
-      <option value="WPA">WPA</option>
-      <option value="WPA2/WPA3">WPA2/WPA3</option>
-    </select>
-  </div>
-
-   <!-- Add the Mac Address field -->
-   <div class="form-group">
-    <label for="macAddress">Mac Address:</label>
-    <input type="text" id="macAddress" name="macAddress" [(ngModel)]="macAddress">
-  </div>
-
-  <div class="form-group">
-    <label for="adminName">Admin Name:</label>
-    <input type="text" id="adminName" name="adminName" [(ngModel)]="adminName">
-  </div>
-
-  <div class="form-group">
-    <label for="adminEmail">Admin Email:</label>
-    <input type="email" id="adminEmail" name="adminEmail" [(ngModel)]="adminEmail">
-  </div>
-
-  <div class="form-group">
-    <label for="adminPhone">Admin Phone:</label>
-    <input type="tel" id="adminPhone" name="adminPhone" [(ngModel)]="adminPhone">
-  </div>
-
-  
-  <!-- Add the Notes/Additional Information field -->
-  <div class="form-group">
-    <label for="additionalInfo">Notes/Additional Information:</label>
-    <textarea id="additionalInfo" name="additionalInfo" [(ngModel)]="additionalInfo"></textarea>
-  </div>
-
-   <!-- Add the Date of Configuration/Last Update field -->
+      <!-- Add the Date of Configuration/Last Update field -->
    <div class="form-group">
     <label for="configDate">Date of Configuration/Last Update:</label>
     <input type="date" id="configDate" name="configDate" [(ngModel)]="configDate">
   </div> 
-
-  <!-- Add the Signature/Approval section -->
-  <div class="form-group">
-    <label for="signature">Signature:</label>
-    <ngx-signature-pad id="signature" name="signature" [(ngModel)]="signature"></ngx-signature-pad>
-  </div>
 
   <div class="form-group">
     <label for="adminName">Administrator's Name/Title:</label>
@@ -111,5 +104,4 @@
     <div class="form-group">
       <button (click)="submitForm()">Submit</button>
     </div>
-  </form>
   
