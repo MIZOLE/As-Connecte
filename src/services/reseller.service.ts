@@ -9,6 +9,8 @@ import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
+
+
 export class ResellerService {
   constructor(private _http: HttpClient, private _router: Router) {}
 
