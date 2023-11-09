@@ -28,7 +28,7 @@
         <mat-menu #menu="matMenu">
             <div class="btn-link">
                 <a mat-menu-item style="margin-top: -10px;" routerLink="/home">Home</a>
-                <a mat-menu-item routerLink="/signin-signup">Resell</a>
+                <a mat-menu-item [routerLink]="['signin-signup']" [routerLinkActive]="['active']">Resell</a>
                 <a mat-menu-item style="margin-bottom: -8px;" routerLink="/support">Support</a>
             </div>
         </mat-menu>
