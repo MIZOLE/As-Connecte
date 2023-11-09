@@ -13,11 +13,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px;
+    // margin: 40px;
   }
   
   button {
     transition: transform 0.7s ease-in-out;
+    position: relative;
+    left: 30px;
   }
   
   button:hover {
@@ -69,7 +71,7 @@ h1:hover {
 }
   .bg-image {
     background-image: url(https://i.postimg.cc/Z5DWNgfB/shutterstock-448807060-min.jpg);
-    height: 30%;
+    height: 40%;
     width: 500;
    
 
@@ -94,3 +96,6 @@ h1:hover {
       cursor: pointer;
   } 
  
+  @media only screen and (max-width: 992px){
+    
+  }

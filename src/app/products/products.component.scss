@@ -197,7 +197,7 @@ body {
 
 .back {
 	transform: rotateY(180deg);
-	background-color: grey;
+	background-color: rgb(50, 224, 50);
 	border: 2px solid black;
 	.inner {
 		grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
@@ -293,7 +293,7 @@ body {
 	height: 3em;
 	line-height: 2.9em;
 	min-width: 3em;
-	background-color: green;
+	background-color: black;
 	border: solid 2px green;
 	color: white;
 	border-radius: 4px;
