@@ -10,6 +10,7 @@ import { SupportComponent } from './support/support.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
+import { InfoComponent } from './info/info.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
@@ -26,7 +27,6 @@ const routes: Routes = [
   { path: 'change-password', component: ChangePasswordComponent },
 
   { path: 'wifi-details', component: WifiDetailsComponent },
-  { path: 'support', component: SupportComponent}
 ];
 
 @NgModule({

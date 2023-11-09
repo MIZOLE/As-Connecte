@@ -23,7 +23,7 @@
   text-decoration: underline;
   text-decoration-color: purple;
   color: #fff;
-  background-color: #800080;
+  background-color: purple;
 }
 
 .btn-link a:hover {
@@ -41,7 +41,7 @@
 }
 
 .toolbar-desktop {
-  background-color: #800080;
+  background-color: black;
 
 }
 
@@ -52,7 +52,7 @@
 
 .toolbar-mobile {
   margin-top: -10px;
-  background-color: #800080;
+  background-color: black;
 }
 
 .mobile-nav {
@@ -63,7 +63,9 @@
   display: block;
 }
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 992px) {
   .desktop-nav {
     display: none;
   }

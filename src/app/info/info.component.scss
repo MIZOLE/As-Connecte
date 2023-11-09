@@ -1,0 +1,34 @@
+// .card-one{
+//     background-image: url('../../assets/images/EVVR-icon-200px_200px_Wi-fi.png') ;
+//     border-radius: 50%;
+//     border: 2px solid black;
+//     width: 250px;
+//     // max-width: 600px;
+//     height: 250px;
+//     // margin: 2px;
+//     // padding: 5px;
+
+// }
+
+.card-two{
+    width: 50px;
+    height: 50px;
+}
+
+.card-three{
+    background-image: url('../../assets/images/about.png') ;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    // margin: 2px;
+    // padding: 12px;
+
+}
+
+#info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // vertical-align: middle;
+}

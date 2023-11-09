@@ -25,7 +25,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { ChangePasswordComponent } from './change-password/change-password.component'
 import { SigninComponent } from './signin/signin.component';
-import { SupportComponent } from './support/support.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,7 @@ import { SupportComponent } from './support/support.component';
     NavBarComponent,
     HomeComponent,
     ChangePasswordComponent,
-    SigninComponent,
-    SupportComponent
+    SigninComponent
   ],
   imports: [
     BrowserModule,
