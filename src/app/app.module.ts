@@ -11,6 +11,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +25,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { ChangePasswordComponent } from './change-password/change-password.component'
 import { SigninComponent } from './signin/signin.component';
-import { InfoComponent } from './info/info.component';
+import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 
 @NgModule({
@@ -37,9 +38,8 @@ import { BodyComponent } from './body/body.component';
     HomeComponent,
     ChangePasswordComponent,
     SigninComponent,
-    InfoComponent,
+    SupportComponent,
     BodyComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -57,7 +57,8 @@ import { BodyComponent } from './body/body.component';
     MatProgressBarModule,
     MatDividerModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
