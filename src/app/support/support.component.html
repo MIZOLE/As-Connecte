@@ -1,0 +1,46 @@
+<mat-card class="support-card">
+    <mat-card-header>
+      <img src="https://media.discordapp.net/attachments/1167437166331314267/1172111684245143632/Electric_Blue_Gradient_Cube_Modern_Company_Business_Technology_Logo.png?ex=655f2112&is=654cac12&hm=b49b0e71f7422fef5a00847c46c491a50090dab7a9f12a01538ac97e865f2b8d&=&width=411&height=411" alt="Logo" width="100px"/>
+      
+      <mat-card-title style="color: black;">Customer Support</mat-card-title>
+    </mat-card-header>
+  
+    <form [formGroup]="supportForm" (ngSubmit)="submitSupportForm()">
+      <mat-card-content>
+        <mat-form-field id="cellphone" appearance="outline">
+          <mat-label for="cellphone">Cellphone</mat-label>
+          <mat-icon aria-hidden="false" aria-label="phone icon" fontIcon="phone"></mat-icon>
+          <input   matInput formControlName="cellphone" required="true">
+        </mat-form-field>
+  
+        <mat-form-field id="email" appearance="outline">
+          <mat-label for="email">email</mat-label>
+          <mat-icon aria-hidden="false" aria-label="email icon" fontIcon="email"></mat-icon>
+          <input matInput formControlName="email" type="email" required="true">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Reason for contact</mat-label>
+            <mat-icon aria-hidden="false" aria-label="help icon" fontIcon="help"></mat-icon>
+            <mat-select>
+              <mat-option value="option">My Reseller Account</mat-option>
+              <mat-option value="option">About Asconnecte</mat-option>
+              <mat-option value="option">Other</mat-option>
+            </mat-select>
+            <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+          </mat-form-field>
+
+        <mat-form-field id="message" appearance="outline">
+            <mat-label for="message">message</mat-label>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="message"></mat-icon>
+            <textarea matInput formControlName="message" required="true"></textarea>
+          </mat-form-field>
+  
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </mat-card-footer>
+    </form>
+  
+  </mat-card>
