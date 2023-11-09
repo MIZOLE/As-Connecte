@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 
-import { SignupComponent } from './signup/signup.component';
+
 import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -33,7 +33,6 @@ import { SigninComponent } from './signin/signin.component';
     LoadvoucherComponent,
     NavBarComponent,
     HomeComponent,
-    SignupComponent,
     ChangePasswordComponent,
     SigninComponent
   ],
