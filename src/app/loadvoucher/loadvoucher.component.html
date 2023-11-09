@@ -1,16 +1,13 @@
 <div class="container">
     <form action="action_page.php">
-      <div class="row">
+      <!-- <div class="row"> -->
         <div class="col-25">
           <!-- <label for="Loadvoucher"type="text">Load Voucher</label> -->
-          <div class="register">
+          <div class="register" >
             <div class="field">
               <h2>Load Voucher</h2>
-              <form [formGroup]="loadVoucherField" (ngSubmit)="loadVoucher()">
-                <input type="text" placeholder="Load Voucher" formControlName="voucher" maxlength="13" required>
-                <button type="submit" (click)="clear()">Submit</button>
-              </form>
-
+             <input type="text" placeholder="Load Voucher" maxlength="13" required>
+             <button>Connect</button>
             </div>
            
           </div>
