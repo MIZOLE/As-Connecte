@@ -1,4 +1,10 @@
+.container {
+  overflow: hidden;
+}
 
+.products {
+  margin-top: 2em;
+}
 @media only screen and (min-width: 992px) {
   .products {
     display: flex;
@@ -28,10 +34,6 @@
   position: relative;
   top: 100px;
 }
-
-.my-container{
-    background-color: red;
- }
 
  
 
