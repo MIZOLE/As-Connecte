@@ -63,7 +63,8 @@ export class ResellerService {
             this.storeLoginDetails(this.token, expiresDate);
           }
         },
-        error: () => {
+        error: (error) => {
+          console.log(error)
           console.log('Incorrect username or password');
         },
       });
