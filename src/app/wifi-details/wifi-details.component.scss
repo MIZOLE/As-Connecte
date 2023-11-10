@@ -1,198 +1,73 @@
 
-/* Change the background color to white */
-form {
-  background-color: rgb(197, 193, 193);
-  padding: 20px;
-  border-radius: 5px;
+body, h2{
+    
+    background: transparent;
+    font-family: 'Kristen ITC';
+    font-weight: 600;
+    font-size: 14px;
+
 }
 
-.container {
-  width: 30%;
-  background-color: #a19c9c; /* Add a border around the form */
+.box-area{
+    width: 800px
 }
 
-/* Update the maximum width for the form container */
-.form-container {
-  max-width: 100px;
-  margin: 0 auto;
-  padding: 20px; /* Add padding to create space around the form */
+
+.right-box{
+    padding: 40px 30px 40px 40px;
 }
 
-/* Style common properties for form groups */
-.form-group {
-  // margin-bottom: 6px;
-  padding: 2px;
-  border-radius: 2px;
+::placeholder{
+  font-family: 'Kristen ITC';
+    font-weight: 600;
+    font-size: 14px;
 }
 
-/* Style labels */
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 3px;
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
 }
 
-/* Style input fields and select boxes */
-.form-group input[type="text"],
-.form-group input[type="password"],
-.form-group select {
-  width: 50%;
-  padding: 300px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the Network Band and Network Mode select boxes */
-.form-group select.form-control {
-  width: 25%;
-  padding: 3px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the Date of Configuration input */
-.form-group input[type="date"] {
-  width: 30%;
-  padding: 5px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the admin contact details (Email and Phone) inputs */
-.form-group input[type="email"].admin-contact,
-.form-group input[type="tel"].admin-contact {
-  width: 50%;
-  padding: 10px;
-  border: 1px solid #534f4f;
-  border-radius: 4px;
-}
-
-/* Style the Network Security Type select box */
-.form-group select#securityType {
-  width: 35%;
-  padding: 5px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the label for the "Network name [SSID]" field */
-.form-group label[for="Network Name [SSID]"] {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Style the input field for "Network name [SSID]" */
-.form-group input[name="Network Name [SSID]"] {
-  width: 200%;
-  padding: 3px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the input-group container */
-.form-group .input-group {
-  width: 70%;
-}
-
-/* Style the form group for Network Encryption */
-.form-group select#networkEncryption {
-  width: 40%;
-  padding: 2px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the Administrator's Name/Title input */
-.form-group input#adminName {
-  width: 40%;
-  padding: 2px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-/* Style the Submit button */
-.form-group button {
-  padding: 10px 20px;
-  background-color: green;
-  color: white;
+.btn-add-wifi{
+  //set the color to green, matching the set icon
+  background-color: #04AA6D; 
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: white;
+  padding: 15px 140px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  font-family: 'Kristen ITC';
+  font-weight: 600;
+
+  border-radius: 15px;
 }
 
-/* Hover effect for the Submit button */
-.form-group button:hover {
-  background-color: green;
+select, option {
+  color: red;
+  font-family: 'Kristen ITC';
+  font-weight: bolder;
+  font-size: 12px;
 }
 
-/* Style the Channel field */
-.form-group input#channel {
-  width: 30%;
-  padding: 4px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
+/*------------ Mobile ------------*/
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
 }
-
-/* Style the label for the Channel field */
-.form-group label[for="channel"] {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-
-
-/* Style common properties for form groups */
-.form-group {
-  margin-bottom: 2px; /* Increase the margin to create space between form groups */
-  padding:2px; /* Add padding to create space within the form groups */
-  border-radius: 3px;
-  clear: both; /* Ensure proper clearing */
-}
-
-
-/* Style the label for "Network password key" */
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px; /* Increase the margin to create space between labels */
-}
-
-/* Style the input field for "Network password key" */
-.form-group label[for="password"] {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 3px; /* Increase the margin to create space between labels */
-}
-
-.form-group input[name="Network password key"] {
-  width: 50%; /* Adjust the width as needed */
-  padding: 1px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-.form-group .input-group-addon i.glyphicon-envelope {
-  color: #007bff;
-  font-size: 18px;
-}
-
-/* Style the input field for "Network admin/contact info" */
-.form-group label[for="phone"] {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 3px; /* Adjust the margin as needed */
-}
-
-.form-group input[name="phone"] {
-  width: 40%; /* Adjust the width as needed */
-  padding: 3px;
-  border: 1px solid #534f4f;
-  border-radius: 2px;
-}
-
-.form-group .input-group .input-group-addon i.glyphicon-earphone {
-  color: #007bff;
-  font-size: 18px;
-}
-
