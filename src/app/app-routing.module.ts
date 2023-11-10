@@ -12,7 +12,7 @@ import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
 
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'support', component: SupportComponent },
   { path: 'products', component: ProductsComponent },
 
-  { path: 'home/signin-signup', component: SigninComponent },
+  { path: 'signin-signup', component: SigninComponent },
   { path: 'body', component: BodyComponent },
 
   { path: 'loadvoucher', component: LoadvoucherComponent },
