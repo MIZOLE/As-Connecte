@@ -23,7 +23,7 @@ import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import { ChangePasswordComponent } from './change-password/change-password.component'
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
@@ -58,7 +58,7 @@ import { BodyComponent } from './body/body.component';
     MatDividerModule,
     MatCardModule,
     HttpClientModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,12 +4,16 @@ form {
   background-color: rgb(197, 193, 193);
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #534f4f; /* Add a border around the form */
+}
+
+.container {
+  width: 30%;
+  background-color: #a19c9c; /* Add a border around the form */
 }
 
 /* Update the maximum width for the form container */
 .form-container {
-  max-width: 200px;
+  max-width: 100px;
   margin: 0 auto;
   padding: 20px; /* Add padding to create space around the form */
 }
@@ -32,15 +36,15 @@ form {
 .form-group input[type="text"],
 .form-group input[type="password"],
 .form-group select {
-  width: 20%;
-  padding: 3px;
+  width: 50%;
+  padding: 300px;
   border: 1px solid #534f4f;
   border-radius: 2px;
 }
 
 /* Style the Network Band and Network Mode select boxes */
 .form-group select.form-control {
-  width: 10%;
+  width: 25%;
   padding: 3px;
   border: 1px solid #534f4f;
   border-radius: 2px;
@@ -48,7 +52,7 @@ form {
 
 /* Style the Date of Configuration input */
 .form-group input[type="date"] {
-  width: 20%;
+  width: 30%;
   padding: 5px;
   border: 1px solid #534f4f;
   border-radius: 2px;
@@ -57,7 +61,7 @@ form {
 /* Style the admin contact details (Email and Phone) inputs */
 .form-group input[type="email"].admin-contact,
 .form-group input[type="tel"].admin-contact {
-  width: 20%;
+  width: 50%;
   padding: 10px;
   border: 1px solid #534f4f;
   border-radius: 4px;
@@ -65,7 +69,7 @@ form {
 
 /* Style the Network Security Type select box */
 .form-group select#securityType {
-  width: 20%;
+  width: 35%;
   padding: 5px;
   border: 1px solid #534f4f;
   border-radius: 2px;
@@ -80,7 +84,7 @@ form {
 
 /* Style the input field for "Network name [SSID]" */
 .form-group input[name="Network Name [SSID]"] {
-  width: 20%;
+  width: 200%;
   padding: 3px;
   border: 1px solid #534f4f;
   border-radius: 2px;
@@ -88,12 +92,12 @@ form {
 
 /* Style the input-group container */
 .form-group .input-group {
-  width: 35%;
+  width: 70%;
 }
 
 /* Style the form group for Network Encryption */
 .form-group select#networkEncryption {
-  width: 10%;
+  width: 40%;
   padding: 2px;
   border: 1px solid #534f4f;
   border-radius: 2px;
@@ -101,8 +105,8 @@ form {
 
 /* Style the Administrator's Name/Title input */
 .form-group input#adminName {
-  width: 22%;
-  padding: 4px;
+  width: 40%;
+  padding: 2px;
   border: 1px solid #534f4f;
   border-radius: 2px;
 }
@@ -124,8 +128,8 @@ form {
 
 /* Style the Channel field */
 .form-group input#channel {
-  width: 18%;
-  padding: 3px;
+  width: 30%;
+  padding: 4px;
   border: 1px solid #534f4f;
   border-radius: 2px;
 }
@@ -162,7 +166,7 @@ form {
 }
 
 .form-group input[name="Network password key"] {
-  width: 30%; /* Adjust the width as needed */
+  width: 50%; /* Adjust the width as needed */
   padding: 1px;
   border: 1px solid #534f4f;
   border-radius: 2px;
@@ -181,7 +185,7 @@ form {
 }
 
 .form-group input[name="phone"] {
-  width: 50%; /* Adjust the width as needed */
+  width: 40%; /* Adjust the width as needed */
   padding: 3px;
   border: 1px solid #534f4f;
   border-radius: 2px;
