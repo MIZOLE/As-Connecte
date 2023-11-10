@@ -1,0 +1,53 @@
+<div class="main">
+    <app-nav-bar></app-nav-bar>
+    <mat-card class="support-card">
+        <mat-card-header>
+            <img src="https://media.discordapp.net/attachments/1167437166331314267/1169937418955268137/Untitled_design.png?ex=65573821&is=6544c321&hm=9655f45891011564b0cebd72dd1460d4d9013c9f2706b9c1c5e9d709921ef501&=&width=411&height=411"
+                alt="Logo" width="100px" />
+
+            <mat-card-title style="color: black;">Customer Support</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="supportForm" (ngSubmit)="submitSupportForm()">
+            <mat-card-content>
+                <mat-form-field id="cellphone" appearance="outline">
+                    <mat-label for="cellphone">Cellphone</mat-label>
+                    <mat-icon aria-hidden="false" aria-label="phone icon" fontIcon="phone"></mat-icon>
+                    <input matInput formControlName="cellphone" required="true">
+                </mat-form-field>
+
+                <mat-form-field id="email" appearance="outline">
+                    <mat-label for="email">email</mat-label>
+                    <mat-icon aria-hidden="false" aria-label="email icon" fontIcon="email"></mat-icon>
+                    <input matInput formControlName="email" type="email" required="true">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Reason for contact</mat-label>
+                    <mat-icon aria-hidden="false" aria-label="help icon" fontIcon="help"></mat-icon>
+                    <mat-select>
+                        <mat-option value="option">My Reseller Account</mat-option>
+                        <mat-option value="option">About Asconnecte</mat-option>
+                        <mat-option value="option">Other</mat-option>
+                    </mat-select>
+                    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field id="message" appearance="outline">
+                    <mat-label for="message">message</mat-label>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="message"></mat-icon>
+                    <textarea matInput formControlName="message" required="true"></textarea>
+                </mat-form-field>
+
+                <mat-divider></mat-divider>
+
+                <mat-card-actions>
+                    <button button mat-raised-button color="primary" type="submit">Submit</button>
+                </mat-card-actions>
+            </mat-card-content>
+            <mat-card-footer>
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </mat-card-footer>
+        </form>
+    </mat-card>
+</div>

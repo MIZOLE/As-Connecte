@@ -11,19 +11,22 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 
-import { SignupComponent } from './signup/signup.component';
+
 import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { SigninComponent } from './signin/signin.component';
+import { SupportComponent } from './support/support.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,10 @@ import { SigninComponent } from './signin/signin.component';
     LoadvoucherComponent,
     NavBarComponent,
     HomeComponent,
-    SignupComponent,
     ChangePasswordComponent,
-    SigninComponent
+    SigninComponent,
+    SupportComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,8 @@ import { SigninComponent } from './signin/signin.component';
     MatProgressBarModule,
     MatDividerModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
