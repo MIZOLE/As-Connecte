@@ -14,11 +14,15 @@ form {
 .main {
     width: 82%;
     margin: 0 auto;
+    background-image: url('../images/wifi.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2em;
 }
 
 mat-form-field {
     width: 100%;
-
 }
 
 mat-card-actions {
