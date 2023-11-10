@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: 'support', component: SupportComponent },
   { path: 'products', component: ProductsComponent },
 
- {path: 'signup', component: SignupComponent},
 
   { path: 'signin', component: SigninComponent },
   {path:'body', component: BodyComponent},
