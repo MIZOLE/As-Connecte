@@ -8,12 +8,11 @@
         <span class="example-spacer"></span>
 
         <div class="links">
-            <a routerLink="/home">Home</a>
-            <a routerLink="/signin">Resell</a>
-            <a routerLink="/support">Support</a>
+            <a routerLink="/home" routerLinkActive="active">Home</a>
+            <a routerLink="/signin-signup" routerLinkActive="active">Resell</a>
+            <a routerLink="/support" routerLinkActive="active">Support</a>
         </div>
     </mat-toolbar>
-  
 </p>
 
 <p class="mobile-nav">
@@ -27,9 +26,9 @@
 
         <mat-menu #menu="matMenu">
             <div class="btn-link">
-                <a mat-menu-item style="margin-top: -10px;" routerLink="/home">Home</a>
-                <a mat-menu-item routerLink="/signin-signup">Resell</a>
-                <a mat-menu-item style="margin-bottom: -8px;" routerLink="/support">Support</a>
+                <a mat-menu-item style="margin-top: -10px;" routerLink="/home" routerLinkActive="active">Home</a>
+                <a mat-menu-item routerLink="/signin-signup" routerLinkActive="active">Resell</a>
+                <a mat-menu-item style="margin-bottom: -8px;" routerLink="/support" routerLinkActive="active">Support</a>
             </div>
         </mat-menu>
     </mat-toolbar>
