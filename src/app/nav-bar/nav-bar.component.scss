@@ -12,6 +12,10 @@
   color: lightgreen !important;
 }
 
+.img{
+  border: 1px solid red;
+}
+
 .links a  {
   cursor: pointer;
   text-decoration: none;
@@ -38,6 +42,7 @@
 .company-name {
   color: #fff;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .company-name:hover {
