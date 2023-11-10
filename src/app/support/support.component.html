@@ -13,7 +13,7 @@
                 <mat-form-field id="cellphone" appearance="outline">
                     <mat-label for="cellphone">Cellphone</mat-label>
                     <mat-icon aria-hidden="false" aria-label="phone icon" fontIcon="phone"></mat-icon>
-                    <input matInput formControlName="cellphone" required="true">
+                    <input matInput type="tel" formControlName="cellphone" placeholder="Enter 10 digit phone number" pattern="^[0-9]*" required="true">
                 </mat-form-field>
 
                 <mat-form-field id="email" appearance="outline">

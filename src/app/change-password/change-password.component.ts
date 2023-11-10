@@ -16,6 +16,8 @@ export class ChangePasswordComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  hide = true;
+
   changePasswordForm: FormGroup = new FormGroup({
     oldPassword: new FormControl('', Validators.required),
     newPassword: new FormControl('', Validators.required),
