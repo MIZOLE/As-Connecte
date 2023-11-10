@@ -9,8 +9,10 @@
 
         <div class="links">
             <a routerLink="/home">Home</a>
+            <a routerLink="/info">About</a>
             <a routerLink="/signin">Resell</a>
-            <a routerLink="/support">Support</a>
+            <a routerLink="/info">Support</a>
+            
         </div>
     </mat-toolbar>
   
@@ -19,7 +21,7 @@
 <p class="mobile-nav">
     <mat-toolbar class="toolbar-mobile">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <img src="../../assets/images/Logo.png" alt="Logo" />
+            <img src="../../assets/images/log-2.png" alt="Logo" />
         </button>
         <span class="company-name">As'Connecte</span>
         <span class="example-spacer"></span>
@@ -28,8 +30,10 @@
         <mat-menu #menu="matMenu">
             <div class="btn-link">
                 <a mat-menu-item style="margin-top: -10px;" routerLink="/home">Home</a>
+                <a mat-menu-item style="margin-bottom: -8px;" routerLink="/info">About</a>
                 <a mat-menu-item routerLink="/signin">Resell</a>
                 <a mat-menu-item style="margin-bottom: -8px;" routerLink="/support">Support</a>
+                
             </div>
         </mat-menu>
     </mat-toolbar>
