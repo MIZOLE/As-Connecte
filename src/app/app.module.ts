@@ -42,10 +42,8 @@ import { BodyComponent } from './body/body.component';
     BodyComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
@@ -59,6 +57,8 @@ import { BodyComponent } from './body/body.component';
     MatCardModule,
     HttpClientModule,
     MatSelectModule,
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
