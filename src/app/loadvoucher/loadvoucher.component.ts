@@ -18,7 +18,7 @@ export class LoadvoucherComponent implements OnInit {
     private _snackBarService: SnackBarService
   ) {}
 
-  isLoaded:any = localStorage.getItem("loaded") || false;
+  isLoaded:any = false;
   oneDayVouchers = ['123456789123', '123456789124', '123456789125'];
   threeDaysVouchers = ['123456789126', '123456789127', '123456789128'];
   sevenDaysVouchers = ['123456789133', '123456789144', '123456789155'];
@@ -29,7 +29,7 @@ export class LoadvoucherComponent implements OnInit {
   seconds:any = 0;
 
   ngOnInit(): void {
-  console.log(this.isLoaded)
+  this.days
   }
 
   getOneDayVoucher(){
@@ -122,7 +122,7 @@ export class LoadvoucherComponent implements OnInit {
         this.sevenDaysVouchers.includes(voucher)
       ) {
         this._snackBarService.openSnackBar('Succesfully loaded', 'SUCCESS');
-        this.isLoaded = localStorage.setItem("loaded", JSON.stringify(true));
+        this.isLoaded = true;
         if (this.oneDayVouchers.includes(voucher)) {
           this.getOneDayVoucher();
         } else if (this.threeDaysVouchers.includes(voucher)) {
