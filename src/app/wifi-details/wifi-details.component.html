@@ -17,22 +17,26 @@
           </h2>
         </div>
         <form [formGroup]="wifiDetailsForm" (ngSubmit)="submitForm()">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiName" placeholder="wifi name">
-        </div>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiProvider" placeholder="wifi provider">
-        </div>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiPassword" placeholder="wifi password">
-        </div>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiSpeed" placeholder="wifi Speed">
-        </div>
-        <div class="input-group-mb-3">
-          <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" class="btn-add-wifi">Add</button>
-        </div>
-      </form>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiName"
+              placeholder="wifi name">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiProvider"
+              placeholder="wifi provider">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiPassword"
+              placeholder="wifi password">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiSpeed"
+              placeholder="wifi Speed">
+          </div>
+          <div class="input-group-mb-3">
+            <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" class="btn-add-wifi">Add</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

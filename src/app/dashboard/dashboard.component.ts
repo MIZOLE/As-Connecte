@@ -18,6 +18,10 @@ export class DashboardComponent implements OnInit {
       this._router.navigate(['/']);
     }
   }
+
+  changePassword() {
+    this._router.navigate(['/', 'change-password']);
+  }
   counter = 0;
 
   increment() {
