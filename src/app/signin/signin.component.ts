@@ -9,13 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.scss'],
 })
 export class SigninComponent implements OnInit {
-
   constructor(
     private _resellerService: ResellerService,
-    private _router: Router,
+    private _router: Router
   ) {}
 
-  show:any
+  show: any;
 
   invalidEmail: String = '';
   notPasswordMatch: String = '';
@@ -34,19 +33,19 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {}
 
-showSignUpForm() {
-  this.show = "sign-up-mode"
-}
+  showSignUpForm() {
+    this.show = 'sign-up-mode';
+  }
 
-  signUp(){
+  signUp() {
     if (!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g.test(this.signUpForm.value.email)) {
       this.invalidEmail = 'Invalid email';
-      return
+      return;
     } else if (
       this.signUpForm.value.password !== this.signUpForm.value.confirmPassword
     ) {
       this.notPasswordMatch = "Passwords don't match";
-      return
+      return;
     }
 
     this._resellerService.signup(this.signUpForm.value).subscribe({
@@ -59,15 +58,12 @@ showSignUpForm() {
       },
     });
   }
-  
 
-  showSignInForm(){
-    this.show = "Sign-in-mode"
+  showSignInForm() {
+    this.show = 'Sign-in-mode';
   }
 
   signIn() {
-console.log(this.signInForm.value)
     this._resellerService.signIn(this.signInForm.value);
-
   }
 }

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -38,6 +43,7 @@
 .company-name {
   color: #fff;
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .company-name:hover {
