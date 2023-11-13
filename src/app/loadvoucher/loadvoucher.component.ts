@@ -15,14 +15,4 @@ export class LoadvoucherComponent implements OnInit{
   ngOnInit(): void {
     
   }
-
-  loadVoucher() {
-
-    this.loadVoucherField.value.voucher= ''
-    
-  }
-
-  clear(){
-    
-  }
 }

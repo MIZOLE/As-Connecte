@@ -44,7 +44,6 @@ import { BodyComponent } from './body/body.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
