@@ -10,16 +10,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ProductsComponent } from './products/products.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
-
-
 import { LoadvoucherComponent } from './loadvoucher/loadvoucher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -28,6 +27,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
+import { AuthInterceptor } from './auth-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -62,7 +62,7 @@ import { BodyComponent } from './body/body.component';
     BrowserAnimationsModule,
     MatSnackBarModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

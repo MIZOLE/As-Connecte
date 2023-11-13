@@ -9,12 +9,10 @@ import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-
-
 export class ResellerService {
   constructor(private _http: HttpClient, private _router: Router) {}
 
-  private token?: String;
+  private token?: string;
   private authenticatedUser = false;
   private logoutTimer: any;
   private username: any;
@@ -56,7 +54,13 @@ export class ResellerService {
 
           if (this.token) {
             this.authenticatedUser = true;
-            this._router.navigate(['/', 'dashboard']);
+  
+            if (res.wifiDetails.length > 0) {
+              this._router.navigate(['/', 'dashboard']);
+            } else {
+              this._router.navigate(['/', 'wifi-details']);
+            }
+
             this.logoutTimer = setTimeout(() => {
               this.logout();
             }, res.expiresIn * 1000);
@@ -66,7 +70,7 @@ export class ResellerService {
           }
         },
         error: (error) => {
-          console.log(error)
+          console.log(error);
           console.log('Incorrect username or password');
         },
       });
@@ -119,7 +123,10 @@ export class ResellerService {
     }
   }
 
-  changePassword(id:any, data:any): Observable<any> {
-    return this._http.put<any>(`http://127.0.0.1:3300/reseller/change-password/${id}`, data)
+  changePassword(id: any, data: any): Observable<any> {
+    return this._http.put<any>(
+      `http://127.0.0.1:3300/reseller/change-password/${id}`,
+      data
+    );
   }
 }

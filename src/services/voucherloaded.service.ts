@@ -1,34 +1,21 @@
 import { Injectable } from '@angular/core';
-import { SnackBarService } from '../app/snack-bar.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class VoucherloadedService {
-  constructor(private _snackBarService: SnackBarService) {}
+  constructor() { }
 
-  days = 0;
-  hours = 0;
-  minutes = 0;
-  seconds = 0;
-
-  inavlidVoucher(voucher: any) {
+  invalidVoucher(voucher: any) {
+    let message;
     if (voucher.length < 12 || (voucher.length > 12 && voucher.length > 0)) {
-      this._snackBarService.openSnackBar(
-        'The voucher must be 12 digits long!',
-        'FAILED'
-      );
+      message = 'The voucher must be 12 digits long!'
     } else if (voucher.length === 0) {
-      this._snackBarService.openSnackBar(
-        'Please enter the voucher number!',
-        'FAILED'
-      );
+      message = 'Please enter the voucher number!'
     } else if (/[^\d]/.test(voucher)) {
-      this._snackBarService.openSnackBar(
-        'The voucher must contain digits only!',
-        'FAILED'
-      );
+      message = 'The voucher must contain digits only!'
     }
+    return message
   }
 
 }
