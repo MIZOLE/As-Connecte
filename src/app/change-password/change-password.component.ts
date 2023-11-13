@@ -28,7 +28,7 @@ export class ChangePasswordComponent implements OnInit {
     const { oldPassword, newPassword, confirmNewPassword } =
       this.changePasswordForm.value;
 
-    if (oldPassword !== '1') {
+    if (oldPassword !== '123') {
       console.log('wrong password');
       return;
     } else if (newPassword !== confirmNewPassword) {

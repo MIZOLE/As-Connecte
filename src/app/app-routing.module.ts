@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/wifi-details', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
