@@ -20,16 +20,18 @@ wifiDetailsForm:FormGroup = new FormGroup ({
 })
 
   ngOnInit(): void {
-    // if(!this._resellerService.getIsAuthenticated())
-    // this._router.navigate(['/', "signin-signup"])
+this.isLoggedIn()
+
+  }
+
+  isLoggedIn() {
+    if(!this._resellerService.getIsAuthenticated()){
+      this._router.navigate(['/', "signin-signup"])
+    }
   }
 
 submitForm() {
-console.log(this.wifiDetailsForm.value)
+  this._router.navigate(['/', "dashboard"])
 }
 }
-
-
-
- 
 
