@@ -54,7 +54,7 @@
         align-items: center;
         justify-content: center; 
         position: relative;
-        top: 100px;
+        // bottom: 100px;
     }
 
     // .card-body{
@@ -106,8 +106,8 @@ body {
 }
 
 .card {
-	width: 320px;
-	height: 340px;
+	width: 300px;
+	height: 280px;
 	margin: 1em;
 	perspective: 1500px;
 	.content {
@@ -334,4 +334,12 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: $accent-color;
+}
+
+@media only screen and (max-width: 992px) {
+	// h2{
+	// 	text-align: center;
+	// 	position: relative;
+	// 	margin-bottom: 50px;
+	// }
 }

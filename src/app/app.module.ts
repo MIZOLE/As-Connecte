@@ -29,6 +29,7 @@ import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { AuthInterceptor } from './auth-interceptor.interceptor';
     ChangePasswordComponent,
     SigninComponent,
     SupportComponent,
-    BodyComponent
+    BodyComponent,
+    
   ],
   imports: [
     AppRoutingModule,
