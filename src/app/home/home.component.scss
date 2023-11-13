@@ -1,7 +1,9 @@
 .container {
   overflow: hidden;
 }
-
+html {
+  height: 100%;
+}
 .products {
   margin-top: 2em;
 }

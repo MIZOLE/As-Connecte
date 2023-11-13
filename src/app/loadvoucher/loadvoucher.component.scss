@@ -1,86 +1,36 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
+.container {
+  margin-bottom: 10em;
+  background-color: green;
+  color: #fff;
+  padding: 2em 0 2em 0;
+  margin-top: -5em;
 }
 
-
-.register {
-  background-color: grey;
-  position: relative;
-  bottom: 90px;
-  background-size: 100%;
-}
-
-body {
-  background: linear-gradient(to bottom, #639EDB, #0668CF) no-repeat;
-  font-family: "Arimo", sans-serif;
-  background-size: 100%;
+:host {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-p {
-  text-align: center;
-  color: #ffffff;
-  font-size: 13px;
-}
-
-a:hover,
-a:visited,
-a:hover,
-a:link {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-
-input {
-  width: 180px;
-  height: 70px;
-  position: relative;
-  bottom: 12px;
-  height: 40px;
-  border: 2px solid black;
-  left: 3rem;
+mat-form-field {
+  width: 50%;
+  margin-left: 27%;
 }
 
 button {
-  margin: 5px;
-  display: flexbox;
-  align-items: center;
-  width: 80px;
-  height: 40px;
-  background-color: green;
-  color: white;
-  font-weight: 600;
-  position: relative;
-  bottom: 12px;
-  left: 3rem;
-
+  width: 50%;
+  margin-left: 27%;
 }
 
-h2 {
-  position: relative;
-  left: 8rem;
-  font-weight: 600;
+.time-remaining {
+  text-align: center;
 }
 
-@media only screen and (min-width:992px) {
+.time-remaining h3 {
+  font-size: 30px;
+}
 
-  input {
-    position: relative;
-    left: 420px;
-  }
-
-  button {
-    position: relative;
-    left: 420px;
-  }
-
-  h2 {
-    position: relative;
-    left: 460px;
-  }
+.time-remaining p {
+  color: #000;
+  font-size: 25px;
 }

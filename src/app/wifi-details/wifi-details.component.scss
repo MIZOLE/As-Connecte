@@ -1,24 +1,18 @@
-
 body, h2{
-    
     background: transparent;
-    font-family: 'Kristen ITC';
     font-weight: 600;
     font-size: 14px;
-
 }
 
 .box-area{
-    width: 800px
+    width: 800px;
 }
-
 
 .right-box{
     padding: 40px 30px 40px 40px;
 }
 
 ::placeholder{
-  font-family: 'Kristen ITC';
     font-weight: 600;
     font-size: 14px;
 }
@@ -40,16 +34,12 @@ body, h2{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-
-  font-family: 'Kristen ITC';
   font-weight: 600;
-
   border-radius: 15px;
 }
 
 select, option {
   color: red;
-  font-family: 'Kristen ITC';
   font-weight: bolder;
   font-size: 12px;
 }

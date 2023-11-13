@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -10,10 +15,6 @@
 
 .active{
   color: lightgreen !important;
-}
-
-.img{
-  border: 1px solid red;
 }
 
 .links a  {
@@ -29,9 +30,9 @@
 .btn-link a{
   font-size: 18px;
   text-decoration: underline;
-  text-decoration-color: purple;
+  text-decoration-color: black;
   color: #fff;
-  background-color: purple;
+  background-color: black;
 }
 
 .btn-link a:hover {
@@ -56,7 +57,7 @@
 }
 
 .btn-burger {
-  background-color: #800080;
+  background-color: black;
   color: #fff;
 }
 
