@@ -51,7 +51,7 @@ export class SigninComponent implements OnInit {
     this._resellerService.signup(this.signUpForm.value).subscribe({
       next: () => {
         console.log('registered successfully');
-        this._router.navigate(['/', "wifi-details"])
+        window.location.reload()
       },
       error: () => {
         console.log('User Already Exists', 'Failed');

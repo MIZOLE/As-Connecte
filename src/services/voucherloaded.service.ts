@@ -13,7 +13,7 @@ export class VoucherloadedService {
   seconds = 0;
 
   inavlidVoucher(voucher: any) {
-    if (voucher.length < 12 || (voucher.length > 12 && voucher.length > 0)) {
+    if (voucher.length > 0 && voucher.length < 12 || voucher.length > 12) {
       this._snackBarService.openSnackBar(
         'The voucher must be 12 digits long!',
         'FAILED'
