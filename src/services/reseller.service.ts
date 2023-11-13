@@ -23,9 +23,9 @@ export class ResellerService {
     return this.authenticatedUser;
   }
 
-getSigninError(){
-  return this.signinError
-}
+  getSigninError() {
+    return this.signinError;
+  }
 
   getToken() {
     return this.token;
@@ -59,7 +59,7 @@ getSigninError(){
 
           if (this.token) {
             this.authenticatedUser = true;
-  
+
             if (res.wifiDetails.length > 0) {
               this._router.navigate(['/', 'dashboard']);
             } else {
@@ -76,7 +76,7 @@ getSigninError(){
         },
         error: (error) => {
           console.log(error);
-          this.signinError ='Incorrect username or password';
+          this.signinError = 'Incorrect username or password';
         },
       });
   }
@@ -131,6 +131,13 @@ getSigninError(){
   changePassword(id: any, data: any): Observable<any> {
     return this._http.put<any>(
       `http://127.0.0.1:3300/reseller/change-password/${id}`,
+      data
+    );
+  }
+
+  addWifi(data: any): Observable<any> {
+    return this._http.post<any>(
+      'http://127.0.0.1:3300/wifi-info/wifi-details',
       data
     );
   }

@@ -57,7 +57,6 @@ export class SigninComponent implements OnInit {
 
     this._resellerService.signup(this.signUpForm.value).subscribe({
       next: () => {
-        this.message = 'registered successfully';
         window.location.reload();
       },
       error: () => {
