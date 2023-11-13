@@ -15,7 +15,8 @@ export class SigninComponent implements OnInit {
   ) {}
 
   show: any;
-
+  message: String = '';
+  messageSignin: String = '';
   invalidEmail: String = '';
   notPasswordMatch: String = '';
 
@@ -40,21 +41,31 @@ export class SigninComponent implements OnInit {
   signUp() {
     if (!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g.test(this.signUpForm.value.email)) {
       this.invalidEmail = 'Invalid email';
+      setTimeout(() => {
+        this.invalidEmail = '';
+      }, 2000);
       return;
     } else if (
       this.signUpForm.value.password !== this.signUpForm.value.confirmPassword
     ) {
       this.notPasswordMatch = "Passwords don't match";
+      setTimeout(() => {
+        this.notPasswordMatch = '';
+      }, 2000);
       return;
     }
 
     this._resellerService.signup(this.signUpForm.value).subscribe({
       next: () => {
-        console.log('registered successfully');
-        window.location.reload()
+        this.message = 'registered successfully';
+        window.location.reload();
       },
       error: () => {
-        console.log('User Already Exists', 'Failed');
+        this.message = 'User Already Exists';
+
+        setTimeout(() => {
+          this.message = '';
+        }, 2000);
       },
     });
   }
@@ -65,5 +76,7 @@ export class SigninComponent implements OnInit {
 
   signIn() {
     this._resellerService.signIn(this.signInForm.value);
+
+    this.messageSignin = this._resellerService.getSigninError();
   }
 }

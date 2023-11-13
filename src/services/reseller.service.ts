@@ -17,10 +17,15 @@ export class ResellerService {
   private logoutTimer: any;
   private username: any;
   private authenticatedSub = new Subject<boolean>();
+  private signinError: any;
 
   getIsAuthenticated() {
     return this.authenticatedUser;
   }
+
+getSigninError(){
+  return this.signinError
+}
 
   getToken() {
     return this.token;
@@ -71,7 +76,7 @@ export class ResellerService {
         },
         error: (error) => {
           console.log(error);
-          console.log('Incorrect username or password');
+          this.signinError ='Incorrect username or password';
         },
       });
   }
