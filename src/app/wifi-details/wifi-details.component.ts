@@ -26,13 +26,18 @@ export class WifiDetailsComponent implements OnInit {
   }
 
   isLoggedIn() {
-    
     if (!this._resellerService.getIsAuthenticated()) {
       this._router.navigate(['/', 'signin-signup']);
-    } 
+    }
   }
 
   submitForm() {
+    this._resellerService.addWifi(this.wifiDetailsForm.value).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: () => console.log(),
+    });
     this._router.navigate(['/', 'dashboard']);
   }
 }
