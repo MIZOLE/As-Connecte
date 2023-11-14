@@ -17,9 +17,14 @@ export class ResellerService {
   private logoutTimer: any;
   private username: any;
   private authenticatedSub = new Subject<boolean>();
+  private signinError: any;
 
   getIsAuthenticated() {
     return this.authenticatedUser;
+  }
+
+  getSigninError() {
+    return this.signinError;
   }
 
   getToken() {
@@ -54,7 +59,7 @@ export class ResellerService {
 
           if (this.token) {
             this.authenticatedUser = true;
-  
+
             if (res.wifiDetails.length > 0) {
               this._router.navigate(['/', 'dashboard']);
             } else {
@@ -71,7 +76,7 @@ export class ResellerService {
         },
         error: (error) => {
           console.log(error);
-          console.log('Incorrect username or password');
+          this.signinError = 'Incorrect username or password';
         },
       });
   }
@@ -126,6 +131,13 @@ export class ResellerService {
   changePassword(id: any, data: any): Observable<any> {
     return this._http.put<any>(
       `http://127.0.0.1:3300/reseller/change-password/${id}`,
+      data
+    );
+  }
+
+  addWifi(data: any): Observable<any> {
+    return this._http.post<any>(
+      'http://127.0.0.1:3300/wifi-info/wifi-details',
       data
     );
   }

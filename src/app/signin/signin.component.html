@@ -9,6 +9,7 @@
 
         <!-- signup form starts -->
         <form [formGroup]="signUpForm" class="sign-up-form" (ngSubmit)="signUp()">
+          <h3 class="message">{{message}}</h3>
           <h2 class="title">
             <img src="https://i.postimg.cc/FFfQp3Gy/5118825.jpg" width="230" height="230" alt="">
           </h2>
@@ -39,7 +40,7 @@
 
         <!-- sign-in form starts here -->
         <form [formGroup]="signInForm" class="sign-in-form" (ngSubmit)="signIn()">
-
+          <h3 class="message-signin">{{messageSignin}}</h3>
           <img class="title" src="https://i.postimg.cc/G2KnfxVK/4968146.jpg" width="230" height="230" alt="">
           <div class="input-field">
             <i><img src="https://i.postimg.cc/2y1fJyYS/email-1.gif" width="40" height="40"

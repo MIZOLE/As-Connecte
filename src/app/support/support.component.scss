@@ -49,3 +49,17 @@ button {
 mat-label {
     padding-left: 1.8em;
 }
+
+@media only screen and (max-width: 992px) {
+
+    .main {
+        width: 82%;
+        margin: 0 auto;
+        background-image: url('../images/wifi.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 2em;
+    }
+   
+}
