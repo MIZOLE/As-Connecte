@@ -14,9 +14,13 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (!this._resellerService.getIsAuthenticated()) {
-      this._router.navigate(['/']);
-    }
+    // if (!this._resellerService.getIsAuthenticated()) {
+    //   this._router.navigate(['/']);
+    // }
+  }
+
+  changePassword() {
+    this._router.navigate(['/', 'change-password']);
   }
   counter = 0;
 

@@ -14,7 +14,9 @@ export class ChangePasswordComponent implements OnInit {
     private _router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this._resellerService.getToken())
+  }
 
   hide = true;
 
@@ -37,7 +39,7 @@ export class ChangePasswordComponent implements OnInit {
     }
 
     this._resellerService
-      .changePassword('6546545aaab1a30eac160e16', this.changePasswordForm.value)
+      .changePassword('6552235ddbe41e537c64a018', this.changePasswordForm.value)
       .subscribe({
         next: (res) => {
           console.log(res);
