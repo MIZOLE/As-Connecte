@@ -31,4 +31,38 @@
     align-items: center;
     justify-content: center;
     // vertical-align: middle;
+    padding: 60px 10px;
+      text-align: center;
+      background-color: white
 }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h3 {
+    background-color: #26c5a3; /* Red background color for h3 */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
