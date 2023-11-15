@@ -28,6 +28,8 @@ import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
+import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
+import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { AuthInterceptor } from './auth-interceptor.interceptor';
     SigninComponent,
     SupportComponent,
     BodyComponent,
+    ReadWifiDetailsComponent,
+    ViewWifiProfileComponent,
     
   ],
   imports: [
