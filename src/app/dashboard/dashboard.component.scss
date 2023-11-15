@@ -19,18 +19,18 @@ body {
     margin-left: 1rem;
     margin-right: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 10px 20px; /* row-gap [column-gap]*/
     justify-content: center;
     // margin-bottom: 10em;
     border: 0.2ch transparent black;
-    margin-left: 4em;
+    // margin-left: 4em;
 
 }
 
 h1 {
 text-align: center;
-color: bisque;
+color: white;
 font-size: 28px;
 }
 
@@ -58,11 +58,23 @@ font-size: 28px;
 
 .container {
     justify-content: center;
-    margin-left: 3em;
-    margin-right: 3em;
-    margin-bottom: 3em;
+    // margin-left: 3em;
+    // margin-right: 3em;
+    // margin-bottom: 3em;
 }
 
+button{
+    background-color: green;
+}
+
+.btn{
+    background-color: green;
+}
+
+.btn-close{
+    color: black;
+    background-color: white;
+}
 
 
 
