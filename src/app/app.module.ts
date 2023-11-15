@@ -29,6 +29,7 @@ import { BodyComponent } from './body/body.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,34 @@ import { BodyComponent } from './body/body.component';
     SignupComponent,
     ChangePasswordComponent,
     BodyComponent,
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
   ],
   imports: [
