@@ -13,11 +13,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px;
   }
   
   button {
     transition: transform 0.7s ease-in-out;
+    position: relative;
+    left: 30px;
   }
   
   button:hover {
@@ -52,8 +53,8 @@
 h1 {
     margin: 100px auto;
     text-align: center;
-    color: green;
-    font-size: 50px;
+    color: #fff;
+    font-size: 2.5rem;
     transition: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -69,7 +70,7 @@ h1:hover {
 }
   .bg-image {
     background-image: url(https://i.postimg.cc/Z5DWNgfB/shutterstock-448807060-min.jpg);
-    height: 30%;
+    height: 40%;
     width: 500;
    
 
@@ -88,9 +89,26 @@ h1:hover {
       color: #333;
       background: #4ee086;
       margin-bottom: 50px;
+      // margin-right: 10px;
       box-shadow: 0 3px 20px 0 #0000003b;
   }
   button:hover{
       cursor: pointer;
   } 
  
+  @media only screen and (max-width: 992px){
+    h1{
+      font-size: x-large;
+      font-weight: bolder;
+      color: white;
+    }
+
+    button{
+      position: relative;
+      margin-right: 40px;
+    }
+
+    .bg-image{
+      height: 30%;
+    }
+  }

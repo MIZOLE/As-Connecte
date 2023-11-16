@@ -1,36 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ResellerService } from 'src/services/reseller.service';
+import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-wifi-details',
   templateUrl: './wifi-details.component.html',
-  styleUrls: ['./wifi-details.component.scss']
+  styleUrls: ['./wifi-details.component.scss'],
 })
-export class WifiDetailsComponent {
-networkName: string = ''; 
-securityType: string = '';
-networkPassword: string = '';
-selectedNetworkBand: string = '';
-selectedNetworkMode: string = '';
-selectedChannel: string = '';
-selectedNetworkEncryption: string = '';
-macAddress: string = '';
-adminName: string = '';
-adminEmail: string = '';
-adminPhone: string = '';
-additionalInfo: string = '';
-configDate: string = '';
-signature: string = '';
-administratorName: string = '';
+export class WifiDetailsComponent implements OnInit {
+  constructor(
+    private _resellerService: ResellerService,
+    private _router: Router
+  ) {}
 
-submitForm() {
-  // Handle form submission, including networkNane and securityType
-  console.log('Form submitted with networkName: ' + this.networkName);
-  console.log('Security Type: + this.securityType');
-  console.log('Network Password/Key: ' + this.networkPassword);
+  wifiDetailsForm: FormGroup = new FormGroup({
+    wifiName: new FormControl('', Validators.required),
+    wifiProvider: new FormControl('', Validators.required),
+    wifiPassword: new FormControl('', Validators.required),
+    wifiSpeed: new FormControl('', Validators.required),
+  });
+
+  ngOnInit(): void {
+    this.isLoggedIn();
+    console.log(this._resellerService.getIsAuthenticated())
+  }
+
+  isLoggedIn() {
+    if (!this._resellerService.getIsAuthenticated()) {
+      this._router.navigate(['/', 'signin-signup']);
+    }
+  }
+
+  submitForm() {
+    this._resellerService.addWifi(this.wifiDetailsForm.value).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: () => console.log(),
+    });
+    this._router.navigate(['/', 'dashboard']);
+  }
 }
-}
-
-
-
- 
-

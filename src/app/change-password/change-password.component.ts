@@ -14,7 +14,11 @@ export class ChangePasswordComponent implements OnInit {
     private _router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this._resellerService.getToken())
+  }
+
+  hide = true;
 
   changePasswordForm: FormGroup = new FormGroup({
     oldPassword: new FormControl('', Validators.required),
@@ -26,7 +30,7 @@ export class ChangePasswordComponent implements OnInit {
     const { oldPassword, newPassword, confirmNewPassword } =
       this.changePasswordForm.value;
 
-    if (oldPassword !== '1') {
+    if (oldPassword !== '123') {
       console.log('wrong password');
       return;
     } else if (newPassword !== confirmNewPassword) {
@@ -35,7 +39,7 @@ export class ChangePasswordComponent implements OnInit {
     }
 
     this._resellerService
-      .changePassword('6546545aaab1a30eac160e16', this.changePasswordForm.value)
+      .changePassword('6552235ddbe41e537c64a018', this.changePasswordForm.value)
       .subscribe({
         next: (res) => {
           console.log(res);

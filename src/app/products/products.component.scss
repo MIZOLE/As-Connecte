@@ -54,7 +54,7 @@
         align-items: center;
         justify-content: center; 
         position: relative;
-        top: 100px;
+        // bottom: 100px;
     }
 
     // .card-body{
@@ -106,8 +106,8 @@ body {
 }
 
 .card {
-	width: 320px;
-	height: 340px;
+	width: 300px;
+	height: 280px;
 	margin: 1em;
 	perspective: 1500px;
 	.content {
@@ -197,7 +197,7 @@ body {
 
 .back {
 	transform: rotateY(180deg);
-	background-color: white;
+	background-color: rgb(50, 224, 50);
 	border: 2px solid black;
 	.inner {
 		grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
@@ -293,7 +293,7 @@ body {
 	height: 3em;
 	line-height: 2.9em;
 	min-width: 3em;
-	background-color: green;
+	background-color: black;
 	border: solid 2px green;
 	color: white;
 	border-radius: 4px;
@@ -334,4 +334,12 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: $accent-color;
+}
+
+@media only screen and (max-width: 992px) {
+	// h2{
+	// 	text-align: center;
+	// 	position: relative;
+	// 	margin-bottom: 50px;
+	// }
 }
