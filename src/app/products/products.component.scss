@@ -6,7 +6,7 @@
 //     top: 100px;
 //     margin: 10px;
 //     border-radius: 20px;
-    
+
 // }
 
 // .card-header{
@@ -34,44 +34,46 @@
 // }
 
 
-@media only screen and (max-width:992px){
-    .products {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+@media only screen and (max-width:992px) {
+	.products {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    }
-    .row{
-     display: block;
-     }
-    .loadvoucher{
-        position: relative;
-        // top: 190px;
-    }
+	}
 
-    h2{
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        position: relative;
-        // bottom: 100px;
-    }
+	.row {
+		display: block;
+	}
 
-    // .card-body{
-    //     // background-color: gray;
-    //     // border: 5px solid navy;
-        
-    // }
+	.loadvoucher {
+		position: relative;
+		// top: 190px;
+	}
 
-    
+	h2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		// bottom: 100px;
+	}
+
+	// .card-body{
+	//     // background-color: gray;
+	//     // border: 5px solid navy;
+
+	// }
+
+
 }
 
-h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    
+h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+
 }
 
 // h3{
@@ -80,10 +82,11 @@ h1{
 //     text-decoration: underline;
 // }
 
-p{
-    font-size: x-large;
-    font-weight: 600;
+p {
+	font-size: x-large;
+	font-weight: 600;
 }
+
 $accent-color: black;
 
 * {
@@ -99,6 +102,7 @@ body {
 	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
 }
+
 .wrapper {
 	display: flex;
 	flex-flow: row wrap;
@@ -110,6 +114,7 @@ body {
 	height: 280px;
 	margin: 1em;
 	perspective: 1500px;
+
 	.content {
 		position: relative;
 		width: 100%;
@@ -122,7 +127,7 @@ body {
 .more {
 	display: none;
 
-	&:checked ~ .content {
+	&:checked~.content {
 		transform: rotateY(180deg);
 	}
 }
@@ -150,7 +155,8 @@ body {
 	background-color: #fff;
 	background-size: cover;
 	background-position: center center;
-    border: 2px solid black;
+	border: 2px solid black;
+
 	&:after {
 		content: '';
 		position: absolute;
@@ -161,12 +167,11 @@ body {
 		display: block;
 		border-radius: 6px;
 		backface-visibility: hidden;
-		background: linear-gradient(
-			40deg,
-			
-			rgba(255, 242, 166, 0.7)
-		);
+		background: linear-gradient(40deg,
+
+				rgba(255, 242, 166, 0.7));
 	}
+
 	.inner {
 		grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
 		justify-items: center;
@@ -179,7 +184,7 @@ body {
 		letter-spacing: 3px;
 		color: white;
 		font-weight: 800;
-        font-size: 65px;
+		font-size: 65px;
 		text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	}
 
@@ -189,6 +194,7 @@ body {
 		font-size: 14px;
 		display: flex;
 		flex-flow: row nowrap;
+
 		i {
 			margin: 0 1px;
 		}
@@ -199,6 +205,7 @@ body {
 	transform: rotateY(180deg);
 	background-color: rgb(50, 224, 50);
 	border: 2px solid black;
+
 	.inner {
 		grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
 		grid-template-columns: repeat(4, auto);
@@ -212,6 +219,7 @@ body {
 		align-items: center;
 		color: $accent-color;
 		grid-row: 3;
+
 		&:not(:first-of-type):before {
 			content: '';
 			position: absolute;
@@ -220,10 +228,12 @@ body {
 			width: 1px;
 			background-color: black;
 		}
+
 		span {
 			font-size: 2em;
 			font-weight: 700;
 		}
+
 		i {
 			&:before {
 				background: linear-gradient(40deg, $accent-color, );
@@ -231,10 +241,13 @@ body {
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
 			}
+
 			font-size: 1.2em;
 		}
+
 		.icon {
 			margin-left: 0.3em;
+
 			span {
 				display: block;
 				margin-top: -0.25em;
@@ -254,7 +267,7 @@ body {
 		line-height: 1.4em;
 		overflow: auto;
 		color: $accent-color;
-        padding: 10px;
+		padding: 10px;
 		// padding-right: 10px;
 	}
 
@@ -315,6 +328,7 @@ body {
 		color: $accent-color;
 		border-color: $accent-color;
 		text-shadow: none;
+
 		&:hover {
 			background-color: green;
 			color: black;
@@ -326,14 +340,28 @@ body {
 ::-webkit-scrollbar {
 	width: 5px;
 }
+
 ::-webkit-scrollbar-track {
 	background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
 	background: lighten($accent-color, 20%);
 }
+
 ::-webkit-scrollbar-thumb:hover {
 	background: $accent-color;
+}
+
+.get_voucheres {
+	display: flex;
+	position: fixed;
+	// flex-wrap: wrap;
+	gap: 10px 20px;
+	/* row-gap [column-gap]*/
+	justify-content: center;
+	margin-bottom: 1em;
+	flex-direction: row;
 }
 
 @media only screen and (max-width: 992px) {
