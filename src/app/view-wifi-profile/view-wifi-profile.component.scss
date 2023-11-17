@@ -8,6 +8,7 @@
 .tr-info {
     font-size: 17px;
     font-weight: 600;
+
     background-color: black;
 }
 
@@ -85,10 +86,20 @@ button{
 }
 
 .btn-close{
-    color: black;
     background-color: white;
 }
 
-td{
+// td{
+//     color: white;
+// }
+
+th{
     color: white;
+}
+
+.tr-info td {
+    font-size: 17px;
+    font-weight: 600;
+color: white;
+    background-color: black;
 }
