@@ -11,8 +11,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,8 +29,10 @@ import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
 import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
-import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';import { AboutComponent } from './about/about.component';
-
+import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component'; 
+import { AboutComponent } from './about/about.component';
+import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -49,35 +51,8 @@ import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.
     ReadWifiDetailsComponent,
     ViewWifiProfileComponent,
     AboutComponent,
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
+    NavBarDashBoardComponent,
+    DashboardComponent
   ],
   imports: [
     AppRoutingModule,
@@ -99,7 +74,7 @@ import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.
     BrowserAnimationsModule,
     MatSnackBarModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
