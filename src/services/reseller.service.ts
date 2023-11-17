@@ -20,7 +20,7 @@ export class ResellerService {
   private signinError: any;
 
   getIsAuthenticated() {
-    return this.authenticatedUser;
+    return localStorage.getItem("authenticated");
   }
 
   getSigninError() {
@@ -28,11 +28,11 @@ export class ResellerService {
   }
 
   getToken() {
-    return this.token;
+    return localStorage.getItem("token");
   }
 
   getUsername() {
-    return this.username;
+    return localStorage.getItem("username");
   }
 
   getAuthenticatedSub() {
@@ -55,10 +55,13 @@ export class ResellerService {
       .subscribe({
         next: (res: any) => {
           this.token = res.token;
+          localStorage.setItem('token', JSON.stringify(this.token))
           this.username = res.username;
+          localStorage.setItem('username', this.username)
 
           if (this.token) {
             this.authenticatedUser = true;
+            localStorage.setItem('authenticated', JSON.stringify(this.authenticatedUser))
 
             if (res.wifiDetails.length > 0) {
               this._router.navigate(['/', 'dashboard']);

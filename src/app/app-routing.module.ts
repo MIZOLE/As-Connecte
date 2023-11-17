@@ -16,7 +16,7 @@ import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-boar
 
 import { AboutComponent } from './about/about.component';
 const routes: Routes = [
-  { path: '', redirectTo: '/view-wifi-profile', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
