@@ -12,7 +12,7 @@ import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 import { InfoComponent } from './info/info.component';
 import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
-
+import { UsersDetailsComponent } from './users-details/users-details.component';
 import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: '', redirectTo: '/read-wifi-details', pathMatch: 'full' },
@@ -32,7 +32,10 @@ const routes: Routes = [
 
  {path: 'wifi-details', component: WifiDetailsComponent},
 
- {path: 'about', component: AboutComponent}
+ {path: 'about', component: AboutComponent},
+
+ {path: 'userwifidetails', component: UsersDetailsComponent}
+
 ];
 
 @NgModule({

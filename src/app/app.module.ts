@@ -30,6 +30,7 @@ import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
 import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';import { AboutComponent } from './about/about.component';
+import { UsersDetailsComponent } from './users-details/users-details.component';
 
 
 
@@ -49,6 +50,7 @@ import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.
     ReadWifiDetailsComponent,
     ViewWifiProfileComponent,
     AboutComponent,
+    UsersDetailsComponent,
     
 
 
