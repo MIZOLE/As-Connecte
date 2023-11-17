@@ -28,7 +28,10 @@ import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
-import { RewardComponent } from './reward/reward.component';
+import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
+import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';import { AboutComponent } from './about/about.component';
+
+
 
 
 @NgModule({
@@ -43,7 +46,37 @@ import { RewardComponent } from './reward/reward.component';
     SigninComponent,
     SupportComponent,
     BodyComponent,
-    RewardComponent,
+    ReadWifiDetailsComponent,
+    ViewWifiProfileComponent,
+    AboutComponent,
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
   ],
   imports: [
