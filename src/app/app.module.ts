@@ -29,7 +29,9 @@ import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
 import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
-import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
+import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';import { AboutComponent } from './about/about.component';
+
+
 
 
 @NgModule({
@@ -46,6 +48,35 @@ import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.
     BodyComponent,
     ReadWifiDetailsComponent,
     ViewWifiProfileComponent,
+    AboutComponent,
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
   ],
   imports: [
