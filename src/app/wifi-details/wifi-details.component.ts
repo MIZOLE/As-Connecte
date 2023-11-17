@@ -23,6 +23,7 @@ export class WifiDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoggedIn();
+    console.log(this._resellerService.getIsAuthenticated())
   }
 
   isLoggedIn() {

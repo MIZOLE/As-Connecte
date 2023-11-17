@@ -28,6 +28,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
+import { RewardComponent } from './reward/reward.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { AuthInterceptor } from './auth-interceptor.interceptor';
     SigninComponent,
     SupportComponent,
     BodyComponent,
+    RewardComponent,
     
   ],
   imports: [
