@@ -14,7 +14,7 @@ import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/read-wifi-details', pathMatch: 'full' },
+  { path: '', redirectTo: '/view-wifi-profile', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
