@@ -15,9 +15,6 @@ export class DashboardComponent implements OnInit {
 
  
   ngOnInit(): void {
-    console.log(this._resellerService.getUsername())
-    console.log(this._resellerService.getToken())
-
     this.isLoggedInUser()
   }
 
@@ -30,8 +27,6 @@ export class DashboardComponent implements OnInit {
   changePassword() {
     this._router.navigate(['/', 'change-password']);
   }
-
-
 
   logOut() {
     this._resellerService.logout();

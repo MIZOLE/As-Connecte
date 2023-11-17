@@ -13,14 +13,24 @@ export class ResellerService {
   constructor(private _http: HttpClient, private _router: Router) {}
 
   private token?: string;
-  private authenticatedUser = false;
+  private authenticatedUser: boolean = false;
   private logoutTimer: any;
   private username: any;
   private authenticatedSub = new Subject<boolean>();
   private signinError: any;
+  private loggedInUserId: any;
+  private password: any;
 
   getIsAuthenticated() {
-    return localStorage.getItem("authenticated");
+    return localStorage.getItem('authenticated');
+  }
+
+  getUserId() {
+    return localStorage.getItem('userId');
+  }
+
+  getPassword() {
+    return localStorage.getItem('password');
   }
 
   getSigninError() {
@@ -28,11 +38,11 @@ export class ResellerService {
   }
 
   getToken() {
-    return localStorage.getItem("token");
+    return localStorage.getItem('token');
   }
 
   getUsername() {
-    return localStorage.getItem("username");
+    return localStorage.getItem('username');
   }
 
   getAuthenticatedSub() {
@@ -55,13 +65,20 @@ export class ResellerService {
       .subscribe({
         next: (res: any) => {
           this.token = res.token;
-          localStorage.setItem('token', JSON.stringify(this.token))
+          localStorage.setItem('token', JSON.stringify(this.token));
           this.username = res.username;
-          localStorage.setItem('username', this.username)
+          localStorage.setItem('username', this.username);
+          this.loggedInUserId = res.userId;
+          localStorage.setItem('userId', this.loggedInUserId);
+          this.password = res.unHashedPassword
+          localStorage.setItem('password', this.password);
 
           if (this.token) {
             this.authenticatedUser = true;
-            localStorage.setItem('authenticated', JSON.stringify(this.authenticatedUser))
+            localStorage.setItem(
+              'authenticated',
+              JSON.stringify(this.authenticatedUser)
+            );
 
             if (res.wifiDetails.length > 0) {
               this._router.navigate(['/', 'dashboard']);
@@ -88,7 +105,7 @@ export class ResellerService {
     this.token = '';
     this.authenticatedUser = false;
     this.authenticatedSub.next(false);
-    this._router.navigate(['/login']);
+    this._router.navigate(['/signin-signup']);
     clearTimeout(this.logoutTimer);
     this.clearLoginDetails();
   }

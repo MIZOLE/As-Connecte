@@ -14,42 +14,63 @@ export class ChangePasswordComponent implements OnInit {
     private _router: Router
   ) {}
 
-  ngOnInit(): void {
-    console.log(this._resellerService.getToken())
-  }
-
   hide = true;
-
+  userId = this._resellerService.getUserId();
+  message?:string
+  errMessage?:string
+  errMessageOld?:string
   changePasswordForm: FormGroup = new FormGroup({
     oldPassword: new FormControl('', Validators.required),
     newPassword: new FormControl('', Validators.required),
     confirmNewPassword: new FormControl('', Validators.required),
   });
 
+  ngOnInit(): void {}
+
+  getId() {
+    return this.userId;
+  }
+
   changePassword() {
     const { oldPassword, newPassword, confirmNewPassword } =
       this.changePasswordForm.value;
+    console.log(this._resellerService.getPassword())
 
-    if (oldPassword !== '123') {
-      console.log('wrong password');
+    if (oldPassword !== this._resellerService.getPassword()) {
+      this.errMessageOld = "Don't match current password"
+
+      setTimeout(() => {
+        this.errMessageOld = '';
+      }, 2000);
       return;
-    } else if (newPassword !== confirmNewPassword) {
-      console.log("passwords don't match");
+    }
+
+    if (newPassword !== confirmNewPassword) {
+      this.errMessage = "Passwords don't match"
+
+      setTimeout(() => {
+        this.errMessage = '';
+      }, 2000);
       return;
     }
 
     this._resellerService
-      .changePassword('6552235ddbe41e537c64a018', this.changePasswordForm.value)
+      .changePassword(this.getId(), this.changePasswordForm.value)
       .subscribe({
         next: (res) => {
-          console.log(res);
+          
+          this.message = res;
+
+          setTimeout(() => {
+            this.message = '';
+            this._router.navigate(["/", "signin-signup"])
+          }, 2000);
         },
-        error: () => console.error(),
+        error: (error) => console.log(error.message)
       });
   }
 
   cancel() {
-    console.log('false');
-    return
+    this._router.navigate(["/", "dashboard"])
   }
 }
