@@ -1,105 +1,67 @@
-.tr-class {
-    font-size: 22px;
-    
-    font-weight: 600;
-    background-color: black;
-}
-
-.tr-info {
-    font-size: 17px;
-    font-weight: 600;
-
-    background-color: black;
-}
-
-.nav-links {
-    display: flex;
-    width: auto;
-    flex-wrap: wrap;
-    gap: 10px 20px; /* row-gap [column-gap]*/
-}
-
 body {
+    padding-top: 20em;
     background-image: url('../images/wifi.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
-.foooter {
+.columns {
+    color: green;
     background-color: black;
 }
-.wallet {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
-    // flex-wrap: wrap;
-    gap: 10px 20px; /* row-gap [column-gap]*/
-    justify-content: center;
-    // margin-bottom: 10em;
-    border: 0.2ch transparent black;
-    // margin-left: 4em;
 
+.columns th,
+tbody tr td {
+    padding: 10px;
 }
 
-h1 {
-text-align: center;
-color: white;
-font-size: 28px;
+.columns:hover {
+    background-color: gray;
 }
 
-.number-display {
-    color: aliceblue;
+.add-button {
+    position: relative;
+    top: -5em;
+    left: 68%;
+    background-color: green;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
 }
 
-.container {
+.heading {
+    position: relative;
+    top: -5em;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
     text-align: center;
 }
 
-.dash {
-    flex-wrap: wrap;
-    gap: 10px 10px; /* row-gap [column-gap]*/
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    // margin-bottom: 10em;
-    border: 0.2ch transparent black;
-    margin-top: 4em;
-    
+table {
+    border: 1px solid red;
+    width: 50%;
+    margin: -3em auto;
 }
 
-.container {
-    justify-content: center;
-    // margin-left: 3em;
-    // margin-right: 3em;
-    // margin-bottom: 3em;
+tbody tr:nth-child(odd) {
+    background-color: #fff;
 }
 
-button{
-    background-color: green;
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    color: red;
+    cursor: pointer;
 }
 
-.btn{
-    background-color: green;
-}
-
-.btn-close{
-    background-color: white;
-}
-
-// td{
-//     color: white;
-// }
-
-th{
+tbody tr:nth-child(odd):hover {
+    background-color: gray;
     color: white;
-}
-
-.tr-info td {
-    font-size: 17px;
-    font-weight: 600;
-color: white;
-    background-color: black;
 }

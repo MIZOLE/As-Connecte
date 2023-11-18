@@ -1,119 +1,26 @@
 <app-nav-bar-dash-board></app-nav-bar-dash-board>
+
 <body>
-  <br>
-  <br>
-  <br>
-          <br>
-        <label for="" style="font-size: 16px;"><strong><i>Available routers</i></strong></label>
-        <br><br>
-
-        <label for="" style="color: rgb(37, 37, 207);" routerLink="/wifi-details"> Add new router +</label>
-        <br>
-        <br>
-
-        <table class="table  table-striped table-bordered table-hover">
-            
-            <thead>
-                <tr class="tr-info" style="font-family: Roboto;">
-                    <th>Wifi name:</th>
-                    <th>Wifi provider:</th>
-                    <th>Wifi speed:</th>
-                    <th>Wifi password:</th>
-                    <th style="width: 15%;" class="text-center">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-            
-
-                <tr class="tr-info" style="font-family: Roboto;">
-                    <td>Vuma</td>
-                    <td>Telkom SZA</td>
-                    <td>4.6 Mbps</td>
-                    <td>luka</td>
-                    <td style="width: 10%;" class="text-center">
-                        <div>
-                            <button class="" style="border: transparent;" ><img src="https://i.postimg.cc/28MrNBH7/pencil.png" width="30" height="30" alt="" srcset=""></button>&nbsp; 
-                            <button class="" style="border: transparent;"><img src="https://i.postimg.cc/Wzmb1ph1/delete-1.png" width="30" height="30" alt="" srcset=""></button> 
-                        </div>
-                    </td>
-                    
-                </tr>
-
-                <tr class="tr-info" style="font-family: Roboto;">
-                    <td>Vuma</td>
-                    <td>Telkom SZA</td>
-                    <td>4.6 Mbps</td>
-                    <td>Austin</td>
-                    <td style="width: 10%;" class="text-center">
-                        <div>
-                            <button class="" style="border: transparent;" ><img src="https://i.postimg.cc/28MrNBH7/pencil.png" width="30" height="30" alt="" srcset=""></button>&nbsp; 
-                            <button class="" style="border: transparent;"><img src="https://i.postimg.cc/Wzmb1ph1/delete-1.png" width="30" height="30" alt="" srcset=""></button> 
-                        </div>
-                    </td>
-                    
-                </tr>
-
-               
-            </tbody> 
-        </table>
-  <footer class="footer"></footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+  <h1 class="heading">Wifi Information</h1>
+  <button class="add-button">Add Wifi</button>
+  <table>
+    <thead>
+      <tr class="columns">
+        <th>Wifi Name</th>
+        <th>Wifi Provider</th>
+        <th>Wifi Speed</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let detail of wifiDetails">
+      <tr>
+        <td>{{detail.wifiName | uppercase }}</td>
+        <td>{{detail.wifiProvider | uppercase }}</td>
+        <td>{{detail.wifiSpeed | uppercase }}</td>
+        <td (click)="removeWifi(detail._id)"><span class="material-symbols-outlined">
+            delete
+          </span></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
-<!-- </html> -->
-
-
-<!-- <div class="row">
-    
-    <div class="col-12">
-        <br>
-        <label for="" style="font-size: 16px;"><strong><i>Available routers</i></strong></label>
-        <br><br>
-
-        <label for="" style="color: rgb(37, 37, 207);" routerLink="/wifi-details"> Add new router +</label>
-        <br>
-        <br>
-        <table class="table  table-striped table-bordered table-hover">
-            
-            <thead>
-                <tr class="tr-class" style="font-family: Roboto;">
-                    <th>Wifi name:</th>
-                    <th>Wifi provider:</th>
-                    <th>Wifi speed:</th>
-                    <th>Wifi password:</th>
-                    <th style="width: 15%;" class="text-center">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="tr-info" style="font-family: Roboto;">
-                    <td>Vuma</td>
-                    <td>Telkom SZA</td>
-                    <td>4.6 Mbps</td>
-                    <td>j49Hq0f8813J3</td>
-                    <td style="width: 10%;" class="text-center">
-                        <div>
-                            <button class="" style="border: transparent;" ><img src="https://i.postimg.cc/28MrNBH7/pencil.png" width="30" height="30" alt="" srcset=""></button>&nbsp; 
-                            <button class="" style="border: transparent;"><img src="https://i.postimg.cc/Wzmb1ph1/delete-1.png" width="30" height="30" alt="" srcset=""></button> 
-                        </div>
-                    </td>
-                    
-                </tr>
-
-
-                <tr class="tr-info" style="font-family: Roboto;">
-                    <td>Vuma</td>
-                    <td>Telkom SZA</td>
-                    <td>4.6 Mbps</td>
-                    <td>j49Hq0f8813J3</td>
-                    <td style="width: 10%;" class="text-center">
-                        <div>
-                            <button class="" style="border: transparent;" ><img src="https://i.postimg.cc/28MrNBH7/pencil.png" width="30" height="30" alt="" srcset=""></button>&nbsp; 
-                            <button class="" style="border: transparent;"><img src="https://i.postimg.cc/Wzmb1ph1/delete-1.png" width="30" height="30" alt="" srcset=""></button> 
-                        </div>
-                    </td>
-                    
-                </tr>
-            </tbody> 
-        </table>
-    </div>
-</div> -->
