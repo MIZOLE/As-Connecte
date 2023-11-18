@@ -8,6 +8,15 @@ body, h2{
     width: 800px;
 }
 
+.cancel-button {
+    position: relative;
+    left: 100%;
+    border: none;
+    background-color: white;
+    font-size: 25px;
+    color: red;
+}
+
 .right-box{
     padding: 40px 30px 40px 40px;
 }

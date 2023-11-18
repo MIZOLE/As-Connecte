@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ResellerService } from 'src/services/reseller.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-wifi-details',
@@ -11,7 +12,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class WifiDetailsComponent implements OnInit {
   constructor(
     private _resellerService: ResellerService,
-    private _router: Router
+    private _router: Router, private _location: Location
   ) {}
 
   wifiDetailsForm: FormGroup = new FormGroup({
@@ -40,5 +41,9 @@ export class WifiDetailsComponent implements OnInit {
       error: () => console.log(),
     });
     this._router.navigate(['/', 'dashboard']);
+  }
+
+  cancel () {
+    this._location.back()
   }
 }

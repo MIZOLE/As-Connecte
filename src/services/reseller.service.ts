@@ -165,4 +165,8 @@ export class ResellerService {
   getWifiDetails(): Observable<any> {
     return this._http.get<any>('http://127.0.0.1:3300/wifi-info/get-all')
   }
+
+  removeOneWifi(id: any): Observable<any> {
+    return this._http.delete<any>(`http://127.0.0.1:3300/wifi-info/delete/${id}`)
+  }
 }
