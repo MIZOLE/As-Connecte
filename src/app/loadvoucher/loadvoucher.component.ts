@@ -23,9 +23,13 @@ export class LoadvoucherComponent implements OnInit {
   days: any = 0;
   hours: any = 0;
   minutes: any = 0;
-  seconds: any = 0;
+  seconds: any = localStorage['seconds'];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.seconds;
+    }, 1000);
+  }
 
   getOneDayVoucher() {
     const date = new Date().toDateString().split(' ');
@@ -39,12 +43,10 @@ export class LoadvoucherComponent implements OnInit {
       }, 2023 ${getHours}:${getMinutes}:${getSeconds}`
     ).getTime();
 
-    localStorage.setItem('end', JSON.stringify(countDownDate));
-
     setInterval(() => {
       const currentTime = new Date().getTime();
 
-      const timeDiff = localStorage['end'] - currentTime;
+      const timeDiff = countDownDate - currentTime;
 
       this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
       this.hours = Math.floor(
@@ -52,6 +54,7 @@ export class LoadvoucherComponent implements OnInit {
       );
       this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      localStorage.setItem('seconds', this.seconds);
     }, 1000);
   }
 
