@@ -13,11 +13,7 @@ export class NavBarDashBoardComponent implements OnInit {
     private _router: Router
   ) {}
 
-  ngOnInit(): void {
-    // if (!this._resellerService.getIsAuthenticated()) {
-    //   this._router.navigate(['/']);
-    // }
-  }
+  ngOnInit(): void {}
 
   changePassword() {
     this._router.navigate(['/', 'change-password']);
