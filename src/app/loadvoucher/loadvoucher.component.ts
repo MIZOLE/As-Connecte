@@ -23,7 +23,7 @@ export class LoadvoucherComponent implements OnInit {
   days: any = 0;
   hours: any = 0;
   minutes: any = 0;
-  seconds: any = localStorage['seconds'];
+  seconds: any = 0;
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -54,7 +54,6 @@ export class LoadvoucherComponent implements OnInit {
       );
       this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-      localStorage.setItem('seconds', this.seconds);
     }, 1000);
   }
 
