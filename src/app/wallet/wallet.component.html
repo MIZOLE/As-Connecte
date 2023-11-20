@@ -1,53 +1,59 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-subtitle></mat-card-subtitle>
-      <mat-card-title></mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p></p>
-       <form>
-    <mat-card-content>
-      <mat-form-field>
-        <mat-label for="Name">Old Password</mat-label>
-        <input matInput [ formControlName="name" required="true">
-        
-           <!-- <mat-icon>{{}}</mat-icon> -->
-        
-      </mat-form-field>
+<!-- <h2>Cashout Form</h2> -->
 
-      <mat-form-field id="bank">
-        <mat-label for="bank"> Bank</mat-label>
-        <input   formControlName="Bank" required="true">
-        
-          <mat-icon></mat-icon>
-        
-      </mat-form-field>
+<mat-card>
+  <!-- <mat-card-content>Simple card</mat-card-content> -->
 
-      <mat-form-field id="Cellphone">
-        <mat-label for="Cellphone">Cellphone number</mat-label>
-        <input  formControlName="Cellphone">
-        
-          <mat-icon></mat-icon>
-        
-      </mat-form-field>
+  <h1>Cashout Form</h1>
+  <!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
+    <!-- <mat-grid-tile> -->
+<mat-form-field class="top-section">
+  <mat-label >Name</mat-label>
+  <input matInput>
+</mat-form-field>
+<!-- </mat-grid-tile> -->
 
-      <mat-divider></mat-divider>
-      <mat-card-actions>
-        <button button mat-raised-button style="background-color: green;" type="submit">SAVE</button>
-        <button button mat-raised-button style="background-color: rgb(155, 1, 1);" (click)="cancel()">CANCEL</button>
-      </mat-card-actions>
-    </mat-card-content>
-    <!-- <mat-card-footer>
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    </mat-card-footer> -->
-  </form>
-      <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-    <mat-card-footer> 
-      <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
-     </mat-card-footer>
-  </mat-card>
+<!-- <mat-grid-tile> -->
+<mat-form-field class="top-section">
+  <mat-label>Cellphone number</mat-label>
+  <input matInput>
+</mat-form-field>
+<!-- </mat-grid-tile> -->
+<!-- </mat-grid-list> -->
+
+<mat-form-field>
+  <mat-label>Bank</mat-label>
+  <mat-select>
+    <mat-option value="one">Capitec Bank</mat-option>
+    <mat-option value="two">Standard Bank</mat-option>
+    <mat-option value="three">ABSA</mat-option>
+    <mat-option value="four">TYME Bank</mat-option>
+    <mat-option value="five">FNB</mat-option>
+    <mat-option value="six">Nedbank</mat-option>
+    <mat-option value="seven">Investec Bank</mat-option>
+    <!-- <mat-option value="eight"></mat-option> -->
+  </mat-select>
+  
+</mat-form-field>
+
+<mat-form-field floatLabel="always">
+  <mat-label>Amount</mat-label>
+  <input matInput type="number" class="example-right-align" placeholder="0">
+  <span matTextPrefix>R&nbsp;</span>
+  <!-- <span matTextSuffix>.00</span> -->
+</mat-form-field>
+
+
+<mat-form-field>
+  <mat-label>My reference</mat-label>
+  <input matInput>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Their reference</mat-label>
+  <input matInput>
+</mat-form-field>
+
+</mat-card>
+
+
+

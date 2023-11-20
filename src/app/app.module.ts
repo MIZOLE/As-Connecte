@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +29,10 @@ import { SigninComponent } from './signin/signin.component';
 import { SupportComponent } from './support/support.component';
 import { BodyComponent } from './body/body.component';
 import { AuthInterceptor } from './auth-interceptor.interceptor';
+import { ReadWifiDetailsComponent } from './read-wifi-details/read-wifi-details.component';
+import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
 import { WalletComponent } from './wallet/wallet.component';
+
 
 
 @NgModule({
@@ -43,6 +47,8 @@ import { WalletComponent } from './wallet/wallet.component';
     SigninComponent,
     SupportComponent,
     BodyComponent,
+    ReadWifiDetailsComponent,
+    ViewWifiProfileComponent,
     WalletComponent,
     
   ],
@@ -64,7 +70,8 @@ import { WalletComponent } from './wallet/wallet.component';
     MatSelectModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatGridListModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent],
