@@ -35,7 +35,6 @@ const routes: Routes = [
  {path: 'about', component: AboutComponent},
 
  {path: 'userwifidetails', component: UsersDetailsComponent}
-
 ];
 
 @NgModule({
