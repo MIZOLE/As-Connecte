@@ -12,11 +12,9 @@ export class LoadvoucherComponent implements OnInit {
     voucher: new FormControl('', Validators.required),
   });
 
-  constructor(
-    private _voucherService: VoucherloadedService,
-  ) { }
+  constructor(private _voucherService: VoucherloadedService) {}
 
-  message?: string
+  message?: string;
   isLoaded: any = false;
   oneDayVouchers = ['123456789123', '123456789124', '123456789125'];
   threeDaysVouchers = ['123456789126', '123456789127', '123456789128'];
@@ -28,7 +26,9 @@ export class LoadvoucherComponent implements OnInit {
   seconds: any = 0;
 
   ngOnInit(): void {
-    this.days
+    setTimeout(() => {
+      this.seconds;
+    }, 1000);
   }
 
   getOneDayVoucher() {
@@ -38,7 +38,8 @@ export class LoadvoucherComponent implements OnInit {
     const getSeconds = new Date().getSeconds();
 
     const countDownDate = new Date(
-      `Nov ${parseInt(date[2]) + 1
+      `Nov ${
+        parseInt(date[2]) + 1
       }, 2023 ${getHours}:${getMinutes}:${getSeconds}`
     ).getTime();
 
@@ -63,7 +64,8 @@ export class LoadvoucherComponent implements OnInit {
     const getSeconds = new Date().getSeconds();
 
     const countDownDate = new Date(
-      `Nov ${parseInt(date[2]) + 3
+      `Nov ${
+        parseInt(date[2]) + 3
       }, 2023 ${getHours}:${getMinutes}:${getSeconds}`
     ).getTime();
 
@@ -88,7 +90,8 @@ export class LoadvoucherComponent implements OnInit {
     const getSeconds = new Date().getSeconds();
 
     const countDownDate = new Date(
-      `Nov ${parseInt(date[2]) + 7
+      `Nov ${
+        parseInt(date[2]) + 7
       }, 2023 ${getHours}:${getMinutes}:${getSeconds}`
     ).getTime();
 
@@ -97,10 +100,10 @@ export class LoadvoucherComponent implements OnInit {
 
       const timeDiff = countDownDate - currentTime;
 
-      this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+      this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
       this.hours = Math.floor(
         (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      )
+      );
       this.minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
     }, 1000);
@@ -117,9 +120,8 @@ export class LoadvoucherComponent implements OnInit {
         this.threeDaysVouchers.includes(voucher) ||
         this.sevenDaysVouchers.includes(voucher)
       ) {
-
-        this.message = 'Succesfully loaded',
-          this.isLoaded = true;
+        this.message = 'Succesfully loaded';
+        this.isLoaded = true;
         if (this.oneDayVouchers.includes(voucher)) {
           this.getOneDayVoucher();
         } else if (this.threeDaysVouchers.includes(voucher)) {
@@ -130,7 +132,7 @@ export class LoadvoucherComponent implements OnInit {
       }
     } else if (this.isLoaded === true) {
       this.loadVoucherField.reset();
-      window.location.href = "https://www.google.com/"
+      window.location.href = 'https://www.google.com/';
     }
   }
 }

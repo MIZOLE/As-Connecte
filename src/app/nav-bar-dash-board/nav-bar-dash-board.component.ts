@@ -3,32 +3,29 @@ import { ResellerService } from 'src/services/reseller.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-nav-bar-dash-board',
+  templateUrl: './nav-bar-dash-board.component.html',
+  styleUrls: ['./nav-bar-dash-board.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class NavBarDashBoardComponent implements OnInit {
   constructor(
     private _resellerService: ResellerService,
     private _router: Router
   ) {}
 
- 
-  ngOnInit(): void {
-    this.isLoggedInUser()
-  }
-
-  isLoggedInUser() {
-    if (this._resellerService.getToken() === null) {
-      this._router.navigate(['/', 'signin-signup']);
-    }
-  }
+  ngOnInit(): void {}
 
   changePassword() {
     this._router.navigate(['/', 'change-password']);
+  }
+  counter = 0;
+
+  increment() {
+    this.counter++;
   }
 
   logOut() {
     this._resellerService.logout();
   }
+
 }
