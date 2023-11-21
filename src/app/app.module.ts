@@ -34,7 +34,6 @@ import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.
 import { AboutComponent } from './about/about.component';
 import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { UsersDetailsComponent } from './users-details/users-details.component';
 
 
 
@@ -52,35 +51,8 @@ import { UsersDetailsComponent } from './users-details/users-details.component';
     BodyComponent,
     ViewWifiProfileComponent,
     AboutComponent,
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
+    NavBarDashBoardComponent,
+    DashboardComponent
   ],
   imports: [
     AppRoutingModule,
