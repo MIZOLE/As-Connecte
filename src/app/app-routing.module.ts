@@ -12,7 +12,7 @@ import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
 import { InfoComponent } from './info/info.component';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
 import { UsersDetailsComponent } from './users-details/users-details.component';import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
-
+// import {WalletCompo
 import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -35,7 +35,7 @@ const routes: Routes = [
 
   { path: 'wifi-details', component: WifiDetailsComponent },
 
-  {path: 'wallet', component: WalletComponent},
+  // {path: 'wallet', component: WalletComponent},
 
   {path: 'info', component:InfoComponent},
 
