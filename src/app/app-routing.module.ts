@@ -18,15 +18,28 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
+
   { path: 'dashboard', component: DashboardComponent },
+
   { path: 'support', component: SupportComponent },
+
   { path: 'products', component: ProductsComponent },
+
   { path: 'signin-signup', component: SigninComponent },
+
   { path:'body', component: BodyComponent},
+
   { path: 'loadvoucher', component: LoadvoucherComponent },
+
   { path: 'change-password', component: ChangePasswordComponent },
+
   { path: 'wifi-details', component: WifiDetailsComponent },
+
+  {path: 'wallet', component: WalletComponent},
+
   {path: 'info', component:InfoComponent},
+
+  
   {path: 'view-wifi-profile', component:ViewWifiProfileComponent},
   {path: 'dash-nav', component: NavBarDashBoardComponent},
  {path: 'wifi-details', component: WifiDetailsComponent},

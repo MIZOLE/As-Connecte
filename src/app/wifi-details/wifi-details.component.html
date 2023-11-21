@@ -19,22 +19,22 @@
             <br>Add your router with us!.
           </h2>
         </div>
-        <form [formGroup]="wifiDetailsForm" (ngSubmit)="submitForm()">
+        <form  (ngSubmit)="submitForm()">
           <div class="input-group mb-3">
             <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiName"
-              placeholder="wifi name">
+              placeholder="wifi name" required="wifiname">
           </div>
           <div class="input-group mb-3">
             <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiProvider"
-              placeholder="wifi provider">
+              placeholder="wifi provider" required="wifiProvider">
           </div>
           <div class="input-group mb-3">
             <input type="text" type="password" class="form-control form-control-lg bg-light fs-6" formControlName="wifiPassword"
-              placeholder="wifi password">
+              placeholder="wifi password" required="wifiPassword">
           </div>
           <div class="input-group mb-3">
             <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiSpeed"
-              placeholder="wifi Speed">
+              placeholder="wifi Speed" required="wifiSpeed">
           </div>
           <div class="input-group-mb-3">
             <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" class="btn-add-wifi">Add</button>
