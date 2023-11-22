@@ -13,9 +13,10 @@ import { InfoComponent } from './info/info.component';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
 import { UsersDetailsComponent } from './users-details/users-details.component';import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 // import {WalletCompo
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent },
 
@@ -46,7 +47,9 @@ const routes: Routes = [
 
  {path: 'about', component: AboutComponent},
 
- {path: 'userwifidetails', component: UsersDetailsComponent}
+ {path: 'userwifidetails', component: UsersDetailsComponent},
+ {path: 'nav', component: NavBarComponent}
+
 ];
 
 @NgModule({

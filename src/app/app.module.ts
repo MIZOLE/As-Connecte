@@ -38,7 +38,6 @@ import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-boar
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
