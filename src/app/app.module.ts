@@ -36,6 +36,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { AboutComponent } from './about/about.component';
 import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CountDownComponent } from './test/count-down/count-down.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WalletComponent,
     AboutComponent,
     NavBarDashBoardComponent,
-    DashboardComponent
+    DashboardComponent,
+    CountDownComponent
   ],
   imports: [
     AppRoutingModule,

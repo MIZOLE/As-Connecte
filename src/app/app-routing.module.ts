@@ -15,6 +15,7 @@ import { UsersDetailsComponent } from './users-details/users-details.component';
 // import {WalletCompo
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
+import { CountDownComponent } from './test/count-down/count-down.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
@@ -48,7 +49,9 @@ const routes: Routes = [
  {path: 'about', component: AboutComponent},
 
  {path: 'userwifidetails', component: UsersDetailsComponent},
- {path: 'nav', component: NavBarComponent}
+ {path: 'nav', component: NavBarComponent},
+ {path: 'count_down', component: CountDownComponent},
+ 
 
 ];
 
