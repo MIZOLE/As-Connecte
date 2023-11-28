@@ -1,12 +1,17 @@
-import { Component, OnInit, OnDestroy  } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subscription, interval } from 'rxjs';
 
+
 @Component({
-  selector: 'app-users-details',
-  templateUrl: './users-details.component.html',
-  styleUrls: ['./users-details.component.scss']
+  selector: 'app-timer',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './timer.component.html',
+  styleUrl: './timer.component.scss'
 })
-export class UsersDetailsComponent implements OnInit, OnDestroy {
+export class TimerComponent implements OnInit, OnDestroy {
+
   private subscription!: Subscription;
 
   public dateNow = new Date()
@@ -43,5 +48,8 @@ ngOnInit() {
 ngOnDestroy() {
 this.subscription.unsubscribe();
 }
+
+
+
 
 }
