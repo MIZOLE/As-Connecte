@@ -9,10 +9,13 @@ import { BodyComponent } from './body/body.component';
 import { SupportComponent } from './support/support.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WifiDetailsComponent } from './wifi-details/wifi-details.component';
-import { InfoComponent } from './info/info.component';
 import { ViewWifiProfileComponent } from './view-wifi-profile/view-wifi-profile.component';
-import { UsersDetailsComponent } from './users-details/users-details.component'; import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
+import { UsersDetailsComponent } from './users-details/users-details.component'; 
+// import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 // import {WalletCompo
+// import { UsersDetailsComponent } from './users-details/users-details.component';
+import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
+import { WalletComponent } from './wallet/wallet.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 import { CountDownComponent } from './test/count-down/count-down.component';
@@ -42,8 +45,14 @@ const routes: Routes = [
 
   // {path: 'wallet', component: WalletComponent},
 
-  { path: 'info', component: InfoComponent },
 
+  {path: 'wallet', component: WalletComponent},
+
+ 
+  
+  {path: 'view-wifi-profile', component:ViewWifiProfileComponent},
+  {path: 'dash-nav', component: NavBarDashBoardComponent},
+ {path: 'wifi-details', component: WifiDetailsComponent},
 
   { path: 'view-wifi-profile', component: ViewWifiProfileComponent },
   { path: 'dash-nav', component: NavBarDashBoardComponent },
