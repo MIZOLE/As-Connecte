@@ -63,9 +63,7 @@ const routes: Routes = [
   { path: 'userwifidetails', component: UsersDetailsComponent },
   { path: 'nav', component: NavBarComponent },
   { path: 'count_down', component: CountDownComponent },
-
-
-
+  
 ];
 
 @NgModule({

@@ -34,8 +34,7 @@ export class ChangePasswordComponent implements OnInit {
   changePassword() {
     const { oldPassword, newPassword, confirmNewPassword } =
       this.changePasswordForm.value;
-    console.log(this._resellerService.getPassword())
-
+  
     if (oldPassword !== this._resellerService.getPassword()) {
       this.errMessageOld = "Don't match current password"
 
