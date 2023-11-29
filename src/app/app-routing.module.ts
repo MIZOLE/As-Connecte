@@ -19,7 +19,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 import { CountDownComponent } from './test/count-down/count-down.component';
-import { TimerComponent } from './timer/timer.component';
+// import { TimerComponent } from './timer/timer.component';
 
 
 const routes: Routes = [
@@ -63,7 +63,7 @@ const routes: Routes = [
   { path: 'userwifidetails', component: UsersDetailsComponent },
   { path: 'nav', component: NavBarComponent },
   { path: 'count_down', component: CountDownComponent },
-  { path: 'time_', component: TimerComponent },
+
 
 
 ];
