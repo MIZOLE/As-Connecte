@@ -15,6 +15,7 @@ import { WalletComponent } from './wallet/wallet.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 import { CountDownComponent } from './test/count-down/count-down.component';
+import { GooglemapsComponent } from './googlemaps/googlemaps.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
@@ -38,8 +39,6 @@ const routes: Routes = [
 
   {path: 'wallet', component: WalletComponent},
 
- 
-  
   {path: 'view-wifi-profile', component:ViewWifiProfileComponent},
   {path: 'dash-nav', component: NavBarDashBoardComponent},
  {path: 'wifi-details', component: WifiDetailsComponent},
@@ -49,6 +48,7 @@ const routes: Routes = [
  {path: 'userwifidetails', component: UsersDetailsComponent},
  {path: 'nav', component: NavBarComponent},
  {path: 'count_down', component: CountDownComponent},
+ {path: 'googlemaps',component:GooglemapsComponent }
  
 
 ];

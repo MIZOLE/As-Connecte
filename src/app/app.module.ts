@@ -37,6 +37,7 @@ import { AboutComponent } from './about/about.component';
 import { NavBarDashBoardComponent } from './nav-bar-dash-board/nav-bar-dash-board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CountDownComponent } from './test/count-down/count-down.component';
+import { GooglemapsComponent } from './googlemaps/googlemaps.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { CountDownComponent } from './test/count-down/count-down.component';
     AboutComponent,
     NavBarDashBoardComponent,
     DashboardComponent,
-    CountDownComponent
+    CountDownComponent,
+    GooglemapsComponent
   ],
   imports: [
     AppRoutingModule,
