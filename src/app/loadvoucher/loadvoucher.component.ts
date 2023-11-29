@@ -194,7 +194,6 @@ export class LoadvoucherComponent implements OnInit {
   //
 
       startCountdown() {
-      console.log("Hello")
       this.countdown = this.getRemainingTime();
 
       this.timer = setInterval(() =>
