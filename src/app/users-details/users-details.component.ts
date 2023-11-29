@@ -10,7 +10,7 @@ export class UsersDetailsComponent implements OnInit, OnDestroy {
   private subscription!: Subscription;
 
   public dateNow = new Date()
-  public dDay = new Date('Nov 29 2023 14:00 :00');
+  public dDay = new Date('Nov 30 2023 14:00 :00');
 
   milliSecondsInASecond = 1000;
   hoursInADay = 24;

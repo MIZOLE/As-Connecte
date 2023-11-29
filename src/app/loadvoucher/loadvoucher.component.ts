@@ -16,9 +16,9 @@ export class LoadvoucherComponent implements OnInit {
 
   isTimerExpired: boolean = false;
 
-  myVouche={voucherid: 1,
-  expirationTime:this.expirationTime,
-  price: 24, voucherCode: '123456'}
+  // myVouche={voucherid: 1,
+  // expirationTime:this.expirationTime,
+  // price: 24, voucherCode: '123456'}
 
   voucherForm: FormGroup = new FormGroup({
     voucher: new FormControl('', Validators.required),
@@ -183,12 +183,15 @@ export class LoadvoucherComponent implements OnInit {
         }  
       }
     } else if (this.isLoaded === true) {
+      window.location.href = 'https://www.google.com/';
       this.voucherForm;
       array.push(this.isLoaded)
-      this.message = 'Seems like voucher has already been loaded!';
-
-      // window.location.href = 'https://www.google.com/';
+   
     }
+
+    // if (this.getRemainingTime() > 0) {
+    //   this.message = 'Seems like voucher has already been loaded!';
+    // }
   }
 
   //
@@ -235,12 +238,11 @@ export class LoadvoucherComponent implements OnInit {
           const { voucher } = this.voucherForm.value;
           this.redeemedVoucher = voucher;
           
-          if(voucher != this.myVouche.voucherCode){
+          if(!this.oneDayVouchers.includes(voucher)){
             console.log("~ Invalid Voucher")
             return
           }
 
-          console.log(typeof(this.redeemedVoucher))
           this.expirationTime = this.calculateExpirationTime();
 
           localStorage.setItem('redeemedVoucher', this.redeemedVoucher);
@@ -267,6 +269,6 @@ export class LoadvoucherComponent implements OnInit {
         private calculateExpirationTime(): number {
 
         const currentTimestamp = Math.floor(new Date().getTime() /1000);
-        return currentTimestamp -1 + 24 * 60; // 24 hours in seconds  
+        return currentTimestamp -1 + 24 * 60 * 60; // 24 hours in seconds  
   }
 }
