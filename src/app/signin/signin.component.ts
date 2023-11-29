@@ -74,6 +74,7 @@ export class SigninComponent implements OnInit {
   }
 
   signIn() {
+
     this._resellerService.signIn(this.signInForm.value);
 
     this.messageSignin = this._resellerService.getSigninError();

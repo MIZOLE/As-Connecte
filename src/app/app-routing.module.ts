@@ -20,6 +20,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 import { CountDownComponent } from './test/count-down/count-down.component';
 // import { TimerComponent } from './timer/timer.component';
+// import { TimerComponent } from './timer/timer.component';
 
 
 const routes: Routes = [

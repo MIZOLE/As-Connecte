@@ -19,7 +19,7 @@
             <br>Add your router with us!.
           </h2>
         </div>
-        <form  (ngSubmit)="submitForm()">
+        <form [formGroup]="wifiDetailsForm" (ngSubmit)="submitForm()">
           <div class="input-group mb-3">
             <input type="text" class="form-control form-control-lg bg-light fs-6" formControlName="wifiName"
               placeholder="wifi name" required="wifiname">
