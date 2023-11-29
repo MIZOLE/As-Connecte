@@ -51,7 +51,7 @@ export class ResellerService {
 
   signup(data: RegistrationInterface): Observable<RegistrationInterface> {
     return this._http.post<RegistrationInterface>(
-      'http://127.0.0.1:3300/reseller/signup',
+      'https://asconnecte.shaper.co.za/reseller/signup',
       data
     );
   }
@@ -59,7 +59,7 @@ export class ResellerService {
   signIn(data: SignInInterface): void {
     this._http
       .post<{ token: String; expiresIn: Number }>(
-        'http://127.0.0.1:3300/reseller/signin',
+        'https://asconnecte.shaper.co.za/reseller/signin',
         data
       )
       .subscribe({
@@ -150,23 +150,23 @@ export class ResellerService {
 
   changePassword(id: any, data: any): Observable<any> {
     return this._http.put<any>(
-      `http://127.0.0.1:3300/reseller/change-password/${id}`,
+      `https://asconnecte.shaper.co.za/reseller/change-password/${id}`,
       data
     );
   }
 
   addWifi(data: any): Observable<any> {
     return this._http.post<any>(
-      'http://127.0.0.1:3300/wifi-info/wifi-details',
+      'https://asconnecte.shaper.co.za/wifi-info/wifi-details',
       data
     );
   }
 
   getWifiDetails(): Observable<any> {
-    return this._http.get<any>('http://127.0.0.1:3300/wifi-info/get-all')
+    return this._http.get<any>('https://asconnecte.shaper.co.za/wifi-info/get-all')
   }
 
   removeOneWifi(id: any): Observable<any> {
-    return this._http.delete<any>(`http://127.0.0.1:3300/wifi-info/delete/${id}`)
+    return this._http.delete<any>(`https://asconnecte.shaper.co.za/wifi-info/delete/${id}`)
   }
 }
