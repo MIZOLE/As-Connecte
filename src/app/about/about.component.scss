@@ -1,8 +1,25 @@
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
 .row{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     flex-direction: column;
+}
+
+.container {
+  overflow: hidden;
+}
+html {
+  height: 100%;
 }
 
 .card-custom {
@@ -60,6 +77,52 @@ font-weight: bolder;
 
 .item{
     border-radius: 15px;
-    min-width: 300px;
+    // min-width: 100px;
+    max-height: 100rem;
+    max-width: 100rem;
     
 }
+
+@media only screen and (max-width: 992px){
+
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // margin-top: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+ 
+  
+.grid-holder{
+  display: flex;
+  // grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  // gap: 5px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.row{
+  display: flex;
+  // flex-flow: row wrap;
+  justify-content: center;
+  // flex-direction: column;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  max-height: 100rem;
+  max-width: 100rem;
+  position: relative;
+  left: 60px;
+}
+
+}
+
