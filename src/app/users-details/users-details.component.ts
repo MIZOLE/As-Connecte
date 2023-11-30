@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy  } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
+import { ResellerService } from 'src/services/reseller.service';
 
 @Component({
   selector: 'app-users-details',
@@ -11,6 +12,10 @@ export class UsersDetailsComponent implements OnInit, OnDestroy {
   private minSubscription!: Subscription;
 
   public dateNow = new Date()
+
+  number = this._reseller.getNumber() 
+
+constructor (private _reseller: ResellerService) {}
 
   date = new Date().toDateString().split(' ');
   getHours = new Date().getHours();
@@ -27,7 +32,7 @@ export class UsersDetailsComponent implements OnInit, OnDestroy {
   ).getTime();
 
   dMinutes = new Date(
-    `Nov ${parseInt(this.date[2])}, 2023 ${this.getHours}:${this.getMinutes+2}:${this.getSeconds}`
+    `Nov ${parseInt(this.date[2])}, 2023 ${this.getHours}:${this.getMinutes+1}:${this.getSeconds+30}`
   ).getTime();
 
   milliSecondsInASecond = 1000;
@@ -77,6 +82,10 @@ ngOnInit() {
 
       this.minSubscription = interval(1000)
       .subscribe(() => { this.getMinutesDifference(); });
+
+      if(this.minutesToDday1 === 0 && this.secondsToDday1 === 0) {
+       this.number = 2
+      }
 
  }
  

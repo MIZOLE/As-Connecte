@@ -183,9 +183,10 @@ export class LoadvoucherComponent implements OnInit {
         }  
       }
     } else if (this.isLoaded === true) {
-      window.location.href = 'https://www.google.com/';
+      // window.location.href = 'https://www.google.com/';
       this.voucherForm;
       array.push(this.isLoaded)
+      this.message = 'Seems like voucher has already been loaded!';
    
     }
 
