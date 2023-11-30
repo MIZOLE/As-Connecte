@@ -39,8 +39,10 @@ export class LoadvoucherComponent implements OnInit {
   hours: any = 0;
   minutes: any = 0;
   seconds: any = 0;
+  isloasdedFrom :any
 
   ngOnInit(): void {
+    this.isloasdedFrom = localStorage.getItem("isLoaded")
     // const storedTime = Number(localStorage.getItem("timerExpiration"));
     // const now = localStorage.getItem('now');
 
@@ -176,6 +178,8 @@ export class LoadvoucherComponent implements OnInit {
         this.message = 'Succesfully loaded';
         this.message_class = 'success'
         this.isLoaded = true;
+        this.isloasdedFrom = true
+        localStorage.setItem('isLoaded', this.isLoaded)
         
         if (this.oneDayVouchers.includes(voucher)) {
           this.redeemVoucher();
