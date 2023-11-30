@@ -34,8 +34,8 @@ export class WifiDetailsComponent implements OnInit {
 
   submitForm() {
     this._resellerService.addWifi(this.wifiDetailsForm.value).subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
+        console.log("successfully added!")
       },
       error: () => console.log(),
     });

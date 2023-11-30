@@ -16,9 +16,9 @@ export class LoadvoucherComponent implements OnInit {
 
   isTimerExpired: boolean = false;
 
-  myVouche={voucherid: 1,
-  expirationTime:this.expirationTime,
-  price: 24, voucherCode: '123456'}
+  // myVouche={voucherid: 1,
+  // expirationTime:this.expirationTime,
+  // price: 24, voucherCode: '123456'}
 
   voucherForm: FormGroup = new FormGroup({
     voucher: new FormControl('', Validators.required),
@@ -31,7 +31,7 @@ export class LoadvoucherComponent implements OnInit {
   message?: string;
   message_class = ""
   isLoaded: any = false;
-  oneDayVouchers = ['123456','246802', '123456789124', '123456789125'];
+  oneDayVouchers = ['123456789124', '123456789125'];
   // threeDaysVouchers = ['123456789126', '123456789127', '123456789128'];
   // sevenDaysVouchers = ['123456789133', '123456789144', '123456789155'];
 
@@ -39,8 +39,9 @@ export class LoadvoucherComponent implements OnInit {
   hours: any = 0;
   minutes: any = 0;
   seconds: any = 0;
-
+  isloasdedFrom :any
   ngOnInit(): void {
+    this.isloasdedFrom = localStorage.getItem("isLoaded")
     // const storedTime = Number(localStorage.getItem("timerExpiration"));
     // const now = localStorage.getItem('now');
 
@@ -159,13 +160,13 @@ export class LoadvoucherComponent implements OnInit {
     let array = []
     let ls_voucher = localStorage.getItem('redeemedVoucher')
     const { voucher } = this.voucherForm.value;
-
-    if(voucher == ls_voucher){
+   
+    // if(voucher == ls_voucher){
       
-      this.message = "Voucher already redeemed!";
-      this.message_class = 'fail'
-      return
-    }
+    //   this.message = "Voucher already redeemed!";
+    //   this.message_class = 'fail'
+    //   return
+    // }
 
     this.message = this._voucherService.invalidVoucher(voucher);
 
@@ -176,6 +177,8 @@ export class LoadvoucherComponent implements OnInit {
         this.message = 'Succesfully loaded';
         this.message_class = 'success'
         this.isLoaded = true;
+        this.isloasdedFrom = true
+        localStorage.setItem('isLoaded', this.isLoaded)
         
         if (this.oneDayVouchers.includes(voucher)) {
           this.redeemVoucher();
@@ -183,18 +186,20 @@ export class LoadvoucherComponent implements OnInit {
         }  
       }
     } else if (this.isLoaded === true) {
+      window.location.href = 'https://www.google.com/';
       this.voucherForm;
       array.push(this.isLoaded)
-      this.message = 'Seems like voucher has already been loaded!';
+      
+    }
 
-      // window.location.href = 'https://www.google.com/';
+    if (this.getRemainingTime() > 0 && array.includes(voucher)) {
+      this.message = 'Seems like the voucher has already been loaded!';
     }
   }
 
   //
 
       startCountdown() {
-      console.log("Hello")
       this.countdown = this.getRemainingTime();
 
       this.timer = setInterval(() =>
@@ -236,17 +241,17 @@ export class LoadvoucherComponent implements OnInit {
           const { voucher } = this.voucherForm.value;
           this.redeemedVoucher = voucher;
           
-          if(voucher != this.myVouche.voucherCode){
+          if(!this.oneDayVouchers.includes(voucher)){
             console.log("~ Invalid Voucher")
             return
           }
 
-          console.log(typeof(this.redeemedVoucher))
+  
           this.expirationTime = this.calculateExpirationTime();
 
           localStorage.setItem('redeemedVoucher', this.redeemedVoucher);
           localStorage.setItem('expirationTime',
-            this.expirationTime.toString());
+            JSON.stringify(this.expirationTime));
 
           this.startCountdown()
 
@@ -269,5 +274,9 @@ export class LoadvoucherComponent implements OnInit {
 
         const currentTimestamp = Math.floor(new Date().getTime() /1000);
         return currentTimestamp -1 + 24 * 60; // 24 hours in seconds  
+  }
+
+  twitter(){
+    window.location.href="twitter.com"
   }
 }
