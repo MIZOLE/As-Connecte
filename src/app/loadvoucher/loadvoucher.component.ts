@@ -103,14 +103,14 @@ export class LoadvoucherComponent implements OnInit {
 
   // getOneDayVoucher() {
 
-  //   const date = new Date().toDateString().split(' ');
-  //   const getHours = new Date().getHours();
-  //   const getMinutes = new Date().getMinutes();
-  //   const getSeconds = new Date().getSeconds();
+    // const date = new Date().toDateString().split(' ');
+    // const getHours = new Date().getHours();
+    // const getMinutes = new Date().getMinutes();
+    // const getSeconds = new Date().getSeconds();
 
-  //   const countDownDate = new Date(
-  //     `Nov ${parseInt(date[2]) + 1}, 2023 ${getHours}:${getMinutes}:${getSeconds}`
-  //   ).getTime();
+    // const countDownDate = new Date(
+    //   `Nov ${parseInt(date[2]) + 1}, 2023 ${getHours}:${getMinutes}:${getSeconds}`
+    // ).getTime();
 
 
   
