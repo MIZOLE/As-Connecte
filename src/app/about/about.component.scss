@@ -81,6 +81,9 @@ font-weight: bolder;
     // min-width: 100px;
     max-height: 100rem;
     max-width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -116,13 +119,13 @@ font-weight: bolder;
 }
 
 .item{
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   // justify-content: center;
   max-height: 100rem;
   max-width: 100rem;
   position: relative;
-  left: 60px;
+  right: 60px;
 }
 
 }
