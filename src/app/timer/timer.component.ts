@@ -8,11 +8,19 @@
 //   standalone: true,
 //   imports: [CommonModule],
 //   templateUrl: './timer.component.html',
+<<<<<<< HEAD
+//   styleUrls: './timer.component.scss'
+// })
+// export class TimerComponent implements OnInit, OnDestroy {
+
+//   // private subscription!: Subscription;
+=======
 //   styleUrl: './timer.component.scss'
 // })
 // export class TimerComponent implements OnInit, OnDestroy {
 
 //   private subscription!: Subscription;
+>>>>>>> 1d0abe3f095c5de22b8bec5198437b5821d6c44d
 
 //   public dateNow = new Date()
 //   public dDay = new Date('Nov 29 2023 14:00 :00');
