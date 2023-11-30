@@ -20,9 +20,14 @@ export class ResellerService {
   private signinError: any;
   private loggedInUserId: any;
   private password: any;
+  private number = 3;
 
   getIsAuthenticated() {
     return localStorage.getItem('authenticated');
+  }
+
+  getNumber() {
+    return this.number
   }
 
   getUserId() {
@@ -70,7 +75,7 @@ export class ResellerService {
           localStorage.setItem('username', this.username);
           this.loggedInUserId = res.userId;
           localStorage.setItem('userId', this.loggedInUserId);
-          this.password = res.unHashedPassword
+          this.password = res.unHashedPassword;
           localStorage.setItem('password', this.password);
 
           if (this.token) {
@@ -163,10 +168,14 @@ export class ResellerService {
   }
 
   getWifiDetails(): Observable<any> {
-    return this._http.get<any>('https://asconnecte.shaper.co.za/wifi-info/get-all')
+    return this._http.get<any>(
+      'https://asconnecte.shaper.co.za/wifi-info/get-all'
+    );
   }
 
   removeOneWifi(id: any): Observable<any> {
-    return this._http.delete<any>(`https://asconnecte.shaper.co.za/wifi-info/delete/${id}`)
+    return this._http.delete<any>(
+      `https://asconnecte.shaper.co.za/wifi-info/delete/${id}`
+    );
   }
 }

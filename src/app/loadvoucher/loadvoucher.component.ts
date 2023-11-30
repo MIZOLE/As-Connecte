@@ -103,14 +103,14 @@ export class LoadvoucherComponent implements OnInit {
 
   // getOneDayVoucher() {
 
-  //   const date = new Date().toDateString().split(' ');
-  //   const getHours = new Date().getHours();
-  //   const getMinutes = new Date().getMinutes();
-  //   const getSeconds = new Date().getSeconds();
+    // const date = new Date().toDateString().split(' ');
+    // const getHours = new Date().getHours();
+    // const getMinutes = new Date().getMinutes();
+    // const getSeconds = new Date().getSeconds();
 
-  //   const countDownDate = new Date(
-  //     `Nov ${parseInt(date[2]) + 1}, 2023 ${getHours}:${getMinutes}:${getSeconds}`
-  //   ).getTime();
+    // const countDownDate = new Date(
+    //   `Nov ${parseInt(date[2]) + 1}, 2023 ${getHours}:${getMinutes}:${getSeconds}`
+    // ).getTime();
 
 
   
@@ -183,9 +183,10 @@ export class LoadvoucherComponent implements OnInit {
         }  
       }
     } else if (this.isLoaded === true) {
-      window.location.href = 'https://www.google.com/';
+      // window.location.href = 'https://www.google.com/';
       this.voucherForm;
       array.push(this.isLoaded)
+      this.message = 'Seems like voucher has already been loaded!';
    
     }
 

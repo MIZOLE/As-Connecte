@@ -14,6 +14,8 @@ export class DashboardComponent implements OnInit {
   ) {}
 
  
+   number = this._resellerService.getNumber()
+
   ngOnInit(): void {
     this.isLoggedInUser()
   }
